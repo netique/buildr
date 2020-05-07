@@ -1,7 +1,7 @@
 # Buildr <img src="inst/rstudio/logo.png" align="right" width=180/> 
 Easy way to run build scripts
 
-![GHversion](https://img.shields.io/github/release/netique/.svg)
+![GHversion](https://img.shields.io/github/release/netique/buildr.svg)
 [![version](https://www.r-pkg.org/badges/version/ShinyItemAnalysis)](https://CRAN.R-project.org/package=buildr)
 ![cranlogs](https://cranlogs.r-pkg.org/badges/buildr)
 
