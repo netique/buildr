@@ -1,4 +1,4 @@
-Name: Run build.R file
-Description: Blablabla...
+Name: Buildr
+Description: Sources the build.R present in current working directory.
 Binding: buildr
 Interactive: false

@@ -1,8 +1,33 @@
-#' Insert \%in\%.
+#' Runs \code{build.R} script
 #'
-#' Call this function as an addin to insert \code{ \%in\% } at the cursor position.
+#' @aliases buildr
 #'
+#' @description Sources the \code{build.R} (case \strong{insensitive}) present in current working directory. Print \code{buildr()} in the console or click on 'Buildr' in addins menu in 'RStudio'.
+#'
+#' @usage buildr()
+#'
+#' @author
+#' Jan Netik \cr
+#'
+#' Department of Psychology, \cr
+#' Faculty of Arts, \cr
+#' Charles University, \cr
+#' Czech Republic \cr
+#'
+#' \email{netikja@@gmail.com} \cr
+#'
+#' @examples
+#' \dontrun{
+#' buildr()
+#' }
 #' @export
 buildr <- function() {
-  source("build.R")
+  files <- list.files()
+  build_name <- files[grep("build.r", files, TRUE)]
+
+  if (length(build_name) != 0) {
+    source("build.R")
+  } else {
+    cat("ERROR: There is no file called 'build.R' anywhere in working directory!")
+  }
 }
