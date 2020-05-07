@@ -2,8 +2,7 @@
 Easy way to run build scripts
 
 ![GHversion](https://img.shields.io/github/release/netique/.svg)
-[![online](https://img.shields.io/badge/online-1.3.3-yellow.svg)](https://shiny.cs.cas.cz/ShinyItemAnalysis/)
-[![version](https://www.r-pkg.org/badges/version/ShinyItemAnalysis)](https://CRAN.R-project.org/package=ShinyItemAnalysis)
+[![version](https://www.r-pkg.org/badges/version/ShinyItemAnalysis)](https://CRAN.R-project.org/package=buildr)
 ![cranlogs](https://cranlogs.r-pkg.org/badges/buildr)
 
 ## Overview
