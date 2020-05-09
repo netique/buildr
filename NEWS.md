@@ -2,6 +2,6 @@
 
 ----------
 
-### First release version 0.0.3 (2020-05-07)
+### First release version 0.0.4 (2020-05-09)
 
 * package offers basic functionality

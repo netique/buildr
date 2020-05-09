@@ -6,6 +6,9 @@
 \usage{
 buildr()
 }
+\value{
+No return value.
+}
 \description{
 Sources the \code{build.R} (case \strong{insensitive}) present in current working directory. Print \code{buildr()} in the console or click on 'Buildr' in addins menu in 'RStudio'.
 }

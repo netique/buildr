@@ -6,6 +6,8 @@
 #'
 #' @usage buildr()
 #'
+#' @return No return value.
+#'
 #' @author
 #' Jan Netik \cr
 #'
@@ -17,9 +19,7 @@
 #' \email{netikja@@gmail.com} \cr
 #'
 #' @examples
-#' \dontrun{
-#' buildr()
-#' }
+#' \dontrun{buildr()}
 #' @export
 buildr <- function() {
   files <- list.files()
@@ -28,6 +28,6 @@ buildr <- function() {
   if (length(build_name) != 0) {
     source("build.R")
   } else {
-    cat("ERROR: There is no file called 'build.R' anywhere in working directory!")
+    warning("ERROR: There is no file called 'build.R' anywhere in working directory!")
   }
 }
