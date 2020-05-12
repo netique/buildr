@@ -31,7 +31,7 @@ library(buildr)
 buildr()
 ```
 
-However, much more feasible is to use Rstudio's addins and create keyboard shorcut (Tools > Modify Keyboard Shorcuts... > *here search for "Buildr"*):
+However, much more feasible is to use RStudio's addins and create [keyboard shorcut](http://rstudio.github.io/rstudioaddins/#keyboard-shorcuts) (Tools > Modify Keyboard Shorcuts... > *here search for "Buildr"*):
 
 ![](addins_showcase.gif)
 
