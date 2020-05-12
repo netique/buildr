@@ -1,9 +1,9 @@
 # Buildr <img src="inst/rstudio/logo.png" align="right" width=180/> 
 Comfort way to run build scripts
 
-![GHversion](https://img.shields.io/github/release/netique/buildr.svg)
 [![version](https://www.r-pkg.org/badges/version/buildr)](https://CRAN.R-project.org/package=buildr)
-![cranlogs](https://cranlogs.r-pkg.org/badges/buildr)
+![GHversion](https://img.shields.io/github/release/netique/buildr.svg)
+![cranlogs](https://cranlogs.r-pkg.org/badges/grand-total/buildr)
 
 ## Overview
 Working with reproducible reports or any other similar projects often requires to run the script that "builds" the output file in a specified way. One can become tired from repeatedly switching to the build script and sourcing it.
@@ -21,8 +21,8 @@ if (!require(remotes)) install.packages("remotes")
 remotes::install_github("netique/buildr")
 ```
 ## Version
-Current version available on [**CRAN**](https://CRAN.R-project.org/package=buildr) is 0.0.3. 
-The newest development version available on [**GitHub**](https://github.com/netique/buildr) is 0.0.3.<br>
+Current version available on [**CRAN**](https://CRAN.R-project.org/package=buildr) is 0.0.4. 
+The newest development version available on [**GitHub**](https://github.com/netique/buildr) is 0.0.4.<br>
 
 ## Usage
 It's very easy to use `buildr`:
