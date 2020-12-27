@@ -1,4 +1,15 @@
-Name: Buildr
-Description: Sources the build.R present in current working directory.
-Binding: buildr
+Name: Init
+Description: init-desc
+Binding: init
 Interactive: false
+
+Name: Aim
+Description: aim-desc
+Binding: aim
+Interactive: false
+
+Name: Build
+Description: build-desc
+Binding: build
+Interactive: false
+

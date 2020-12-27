@@ -2,26 +2,32 @@
 % Please edit documentation in R/aim.R
 \name{aim}
 \alias{aim}
-\title{Aim}
+\title{Set Makefile target}
 \usage{
-aim()
+aim(target = NULL)
 }
 \value{
-Character string echoing the terminal.
+No return value. Called for side effects.
 }
 \description{
-Sbalbalbaab.
+\code{aim} looks for an existing \code{Makefile}, reads its content, and
+offers a list of discovered \code{Makefile} "rules" or "targets" (build
+scripts, in our case) in an interactive way.
 }
 \examples{
 \dontrun{
 aim()
 }
 }
-\author{
-Jan Netik \cr
-
-Department of Psychology, \cr Faculty of Arts, \cr
-Charles University, \cr Czech Republic \cr
-
-\email{netikja@gmail.com} \cr
+\seealso{
+Other functions from \code{buildr} trinity: 
+\code{\link{build}()},
+\code{\link{init}()}
 }
+\author{
+Jan Netik
+}
+\concept{functions from \code{buildr} trinity}
+\keyword{file}
+\keyword{misc}
+\keyword{utilities}

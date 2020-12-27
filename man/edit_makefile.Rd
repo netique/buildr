@@ -10,7 +10,7 @@ edit_makefile()
 No return value. Called for side effect.
 }
 \description{
-Edit Makefile
+Opens \code{Makefile}, if present in the project root.
 }
 \seealso{
 The \href{https://www.gnu.org/software/make/manual/html_node/}{documentation for GNU Make}.

@@ -1,5 +1,7 @@
 #' Edit Makefile
 #'
+#' Opens \code{Makefile}, if present in the project root.
+#'
 #' @return No return value. Called for side effect.
 #'
 #' @seealso The [documentation for GNU

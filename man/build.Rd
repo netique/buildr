@@ -17,6 +17,11 @@ Sbalbalbaab.
 build()
 }
 }
+\seealso{
+Other functions from \code{buildr} trinity: 
+\code{\link{aim}()},
+\code{\link{init}()}
+}
 \author{
 Jan Netik \cr
 
@@ -25,3 +30,7 @@ Charles University, \cr Czech Republic \cr
 
 \email{netikja@gmail.com} \cr
 }
+\concept{functions from \code{buildr} trinity}
+\keyword{file}
+\keyword{misc}
+\keyword{utilities}
