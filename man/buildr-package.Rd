@@ -14,7 +14,7 @@ Working with reproducible reports or any other
     switching to the build script and sourcing it. The 'buildr' package
     does this one simple thing via 'RStudio' addin – user can set up the
     keyboard shortcut and run the build script with one keystroke anywhere
-    anytime. The second way is to pass hhhhhh command to console which
+    anytime. The second way is to pass buildr() command to console which
     does the same thing. Both ways source the build.R (case insensitive)
     file present in the current working directory.
 }

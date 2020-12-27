@@ -52,7 +52,7 @@ However, much more feasible is to use RStudio’s addins and create
 shorcut](http://rstudio.github.io/rstudioaddins/#keyboard-shorcuts)
 (Tools &gt; Modify Keyboard Shorcuts… &gt; *here search for “Buildr”*):
 
-<!-- ![](addins_showcase.gif) -->
+<img src="addins_showcase.gif" width="100%" />
 
 ## License
 

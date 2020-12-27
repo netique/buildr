@@ -2,8 +2,5 @@ pandoc: 2.11.2
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2020-12-27T13:44Z
-urls:
-  reference: https://netique.github.io/buildr/reference
-  article: https://netique.github.io/buildr/articles
+last_built: 2020-12-27T15:43Z
 

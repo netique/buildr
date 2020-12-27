@@ -54,7 +54,11 @@ library(buildr)
 
 However, much more feasible is to use RStudio's addins and create [keyboard shorcut](http://rstudio.github.io/rstudioaddins/#keyboard-shorcuts) (Tools > Modify Keyboard Shorcuts... > *here search for "Buildr"*):
 
-<!-- ![](addins_showcase.gif) -->
+
+```{r echo=FALSE}
+knitr::include_graphics("addins_showcase.gif")
+```
+
 
 ## License
 This program is free software and you can redistribute it and or modify it under the terms of the [GNU GPL 3](https://www.gnu.org/licenses/gpl-3.0.en.html).

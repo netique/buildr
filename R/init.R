@@ -27,7 +27,7 @@ init <- function(prefix = "build", path = ".", sep = "_", command_args = "") {
   build_scripts <- list.files(path, pattern)
 
   if (length(build_scripts) == 0) {
-    return(usethis::ui_oops("{usethis::ui_field('{buildr}')} has not discovered any build scripts.\nTry to call {usethis::ui_code('buildr::init()')} again with different {usethis::ui_field('prefix')} argument."))
+    return(usethis::ui_oops("{usethis::ui_field('{buildr}')} has not discovered any build scripts. Have you created them yet?\nIf so, try to call {usethis::ui_code('buildr::init()')} again with different {usethis::ui_field('prefix')} argument."))
   }
 
   build_scripts_trimmed <- stringr::str_extract(
