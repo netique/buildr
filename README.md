@@ -14,7 +14,7 @@ Status](https://img.shields.io/github/workflow/status/netique/buildr/R-CMD-check
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
-## WARNING: DEVELOPMENT VERSION UNDER CONSTRUCTION!
+## WARNING: DEVELOPMENT VERSION UNDER CONSTRUCTION\!
 
 To use previous, stable release, see CRAN version (below) or use:
 
@@ -23,6 +23,7 @@ remotes::install_github("netique/buildr", ref = "v0.0.4")
 ```
 
 <!-- Working with reproducible reports or any other similar projects often requires to run the script that "builds" the output file in a specified way. One can become tired from repeatedly switching to the build script and sourcing it. -->
+
 <!-- The `buildr` package does this one simple thing via "RStudio addin" – user can set up the *keyboard shortcut* and run the build script with **one keystroke anywhere anytime.** The second way is to pass `buildr()` (don't forget the parentheses!) command to console which does the same thing. Both ways source the `build.R` (case *insensitive*) file present in the current working directory. -->
 
 ## Installation
@@ -53,7 +54,7 @@ library(buildr)
 However, much more feasible is to use RStudio’s addins and create
 [keyboard
 shorcut](http://rstudio.github.io/rstudioaddins/#keyboard-shorcuts)
-(Tools &gt; Modify Keyboard Shorcuts… &gt; *here search for “Buildr”*):
+(Tools \> Modify Keyboard Shorcuts… \> *here search for “Buildr”*):
 
 ``` r
 knitr::include_graphics("man/figures/addins_showcase.gif")
@@ -64,5 +65,5 @@ knitr::include_graphics("man/figures/addins_showcase.gif")
 ## License
 
 This program is free software and you can redistribute it and or modify
-it under the terms of the [GNU GPL
-3](https://www.gnu.org/licenses/gpl-3.0.en.html).
+it under the terms of the [GNU
+GPL 3](https://www.gnu.org/licenses/gpl-3.0.en.html).
