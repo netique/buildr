@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Set Makefile target — aim • buildr</title>
+<title>Set Makefile Target — aim • buildr</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -19,8 +19,8 @@
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
@@ -46,11 +46,15 @@
 
 
 
-<meta property="og:title" content="Set Makefile target — aim" />
+<meta property="og:title" content="Set Makefile Target — aim" />
 <meta property="og:description" content="aim looks for an existing Makefile, reads its content, and
-offers a list of discovered Makefile &quot;rules&quot; or &quot;targets&quot; (build
+offers a list of discovered Makefile &quot;targets&quot; or &quot;rules&quot; (build
 scripts, in our case) in an interactive way." />
-<meta property="og:image" content="/logo.png" />
+<meta property="og:image" content="https://netique.github.io/buildr/reference/figures/logo.png" />
+<meta property="og:image:alt" content="buildr: Organize & Run Build Scripts Comfortably" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@netikja" />
+<meta name="twitter:site" content="@netikja" />
 
 
 
@@ -133,18 +137,18 @@ scripts, in our case) in an interactive way." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Set Makefile target</h1>
+    <h1>Set Makefile Target</h1>
     <small class="dont-index">Source: <a href='https://github.com/netique/buildr/blob/master/R/aim.R'><code>R/aim.R</code></a></small>
     <div class="hidden name"><code>aim.Rd</code></div>
     </div>
 
     <div class="ref-description">
     <p><code>aim</code> looks for an existing <code>Makefile</code>, reads its content, and
-offers a list of discovered <code>Makefile</code> "rules" or "targets" (build
+offers a list of discovered <code>Makefile</code> "targets" or "rules" (build
 scripts, in our case) in an interactive way.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>aim</span><span class='op'>(</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>aim</span><span class='op'>(</span>target <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -152,7 +156,7 @@ scripts, in our case) in an interactive way.</p>
     <p>No return value. Called for side effects.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other functions <code>buildr</code> trinity: 
+    <div class='dont-index'><p>Other functions from <code>buildr</code> trinity: 
 <code><a href='build.html'>build</a>()</code>,
 <code><a href='init.html'>init</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
@@ -175,7 +179,7 @@ scripts, in our case) in an interactive way.</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Jan Netik.</p>
+  <p>Developed by <a href='https://jan.netik.cz'>Jan Netik</a>.</p>
 </div>
 
 <div class="pkgdown">

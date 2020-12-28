@@ -4,7 +4,7 @@
 \name{buildr-package}
 \alias{buildr}
 \alias{buildr-package}
-\title{buildr: Comfort Way to Run Build Scripts}
+\title{buildr: Organize & Run Build Scripts Comfortably}
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
@@ -21,7 +21,7 @@ Working with reproducible reports or any other
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/netique/buildr}
+  \item \url{https://netique.github.io/buildr}
   \item Report bugs at \url{https://github.com/netique/buildr/issues}
 }
 

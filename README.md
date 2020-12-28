@@ -1,19 +1,17 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# buildr <img src="man/figures/logo.png" align="right" width=180/>
-
-Comfort way to run build scripts
+# buildr <a href='https://netique.github.io/buildr'><img src='man/figures/logo.png' align="right" height="202" /></a>
 
 <!-- badges: start -->
 
+[![version](https://www.r-pkg.org/badges/version/buildr)](https://CRAN.R-project.org/package=buildr)
+[![GHversion](https://img.shields.io/github/v/release/netique/buildr?include_prereleases)](https://github.com/netique/buildr)
 [![GitHub Workflow
 Status](https://img.shields.io/github/workflow/status/netique/buildr/R-CMD-check)](https://github.com/netique/buildr/actions?query=workflow%3AR-CMD-check)
-[![version](https://www.r-pkg.org/badges/version/buildr)](https://CRAN.R-project.org/package=buildr)
-![GHversion](https://img.shields.io/github/release/netique/buildr.svg)
+[![cranlogs](https://cranlogs.r-pkg.org/badges/grand-total/buildr)](https://cranlogs.r-pkg.org/)
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-![cranlogs](https://cranlogs.r-pkg.org/badges/grand-total/buildr)
 <!-- badges: end -->
 
 ## WARNING: DEVELOPMENT VERSION UNDER CONSTRUCTION!
@@ -50,13 +48,16 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(buildr)
-## basic example code
 ```
 
 However, much more feasible is to use RStudio’s addins and create
 [keyboard
 shorcut](http://rstudio.github.io/rstudioaddins/#keyboard-shorcuts)
 (Tools &gt; Modify Keyboard Shorcuts… &gt; *here search for “Buildr”*):
+
+``` r
+knitr::include_graphics("man/figures/addins_showcase.gif")
+```
 
 <img src="man/figures/addins_showcase.gif" width="100%" />
 

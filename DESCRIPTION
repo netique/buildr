@@ -1,5 +1,5 @@
 Package: buildr
-Title: Comfort Way to Run Build Scripts
+Title: Organize & Run Build Scripts Comfortably
 Version: 0.1.0
 Authors@R: 
     person(given = "Jan",
@@ -17,7 +17,7 @@ Description: Working with reproducible reports or any other
     does the same thing. Both ways source the build.R (case insensitive)
     file present in the current working directory.
 License: GPL (>= 3)
-URL: https://github.com/netique/buildr
+URL: https://netique.github.io/buildr
 BugReports: https://github.com/netique/buildr/issues
 Imports: 
     rstudioapi,

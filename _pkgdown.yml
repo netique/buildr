@@ -1,0 +1,31 @@
+url: https://netique.github.io/buildr
+
+authors:
+  Jan Netik:
+    href: https://jan.netik.cz
+
+reference:
+- title: The trinity
+  desc: The core functions of the package
+  contents:
+  - init
+  - aim
+  - build
+
+- title: Others
+  contents:
+  - edit_makefile
+
+template:
+  opengraph:
+    image:
+      src: man/figures/logo.png
+      alt: "buildr: Organize & Run Build Scripts Comfortably"
+    twitter:
+      creator: "@netikja"
+      card: summary_large_image
+  params:
+    # docsearch:
+      # api_key:
+      # index_name:
+    bootswatch: flatly

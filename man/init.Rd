@@ -2,7 +2,7 @@
 % Please edit documentation in R/init.R
 \name{init}
 \alias{init}
-\title{Initialize}
+\title{Discover Build Script(s) & Write Them into Makefile}
 \usage{
 init(prefix = "build", path = ".", sep = "_", command_args = "")
 }
@@ -10,9 +10,10 @@ init(prefix = "build", path = ".", sep = "_", command_args = "")
 Character string echoing the terminal.
 }
 \description{
-Sbalbalbaab.
+Discover Build Script(s) & Write Them into Makefile
 }
 \examples{
+
 \dontrun{
 init()
 }

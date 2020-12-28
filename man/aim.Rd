@@ -2,7 +2,7 @@
 % Please edit documentation in R/aim.R
 \name{aim}
 \alias{aim}
-\title{Set Makefile target}
+\title{Set Makefile Target}
 \usage{
 aim(target = NULL)
 }
@@ -11,7 +11,7 @@ No return value. Called for side effects.
 }
 \description{
 \code{aim} looks for an existing \code{Makefile}, reads its content, and
-offers a list of discovered \code{Makefile} "rules" or "targets" (build
+offers a list of discovered \code{Makefile} "targets" or "rules" (build
 scripts, in our case) in an interactive way.
 }
 \examples{

@@ -7,18 +7,24 @@
 #' @seealso The [documentation for GNU
 #'   Make](https://www.gnu.org/software/make/manual/html_node/).
 #'
+#' @importFrom rstudioapi executeCommand navigateToFile hasFun
+#' @importFrom usethis ui_info ui_oops ui_todo
+#'
 #' @export
 edit_makefile <- function() {
   if (!file.exists("Makefile")) {
-    usethis::ui_oops("{usethis::ui_value('Makefile')} does not exist in project root.")
-    return(usethis::ui_todo("Call {usethis::ui_code('buildr::init()')} to create it."))
+    ui_oops("{ui_value('Makefile')} does not exist in project root.")
+    return(ui_todo("Call {ui_code('buildr::init()')} to create it."))
   }
-  usethis::ui_info("{usethis::ui_path('Makefile')} opened.")
-  if (rstudioapi::isAvailable() && rstudioapi::hasFun("navigateToFile")) {
-    rstudioapi::navigateToFile("Makefile")
+
+  ui_info("{ui_path('Makefile')} opened.")
+
+  if (isAvailable() && hasFun("navigateToFile")) {
+    navigateToFile("Makefile")
   }
   else {
     utils::file.edit("Makefile")
   }
+
   invisible("Makefile")
 }

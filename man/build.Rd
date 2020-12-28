@@ -2,7 +2,7 @@
 % Please edit documentation in R/build.R
 \name{build}
 \alias{build}
-\title{Build}
+\title{Run Selected Build Script}
 \usage{
 build()
 }
@@ -23,12 +23,7 @@ Other functions from \code{buildr} trinity:
 \code{\link{init}()}
 }
 \author{
-Jan Netik \cr
-
-Department of Psychology, \cr Faculty of Arts, \cr
-Charles University, \cr Czech Republic \cr
-
-\email{netikja@gmail.com} \cr
+Jan Netik
 }
 \concept{functions from \code{buildr} trinity}
 \keyword{file}
