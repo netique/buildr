@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Discover Build Script(s) &amp; Write Them into Makefile — init • buildr</title>
+<title>Discover Build Scripts &amp; Create Makefile — init • buildr</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +46,10 @@
 
 
 
-<meta property="og:title" content="Discover Build Script(s) &amp; Write Them into Makefile — init" />
-<meta property="og:description" content="Discover Build Script(s) &amp;amp; Write Them into Makefile" />
+<meta property="og:title" content="Discover Build Scripts &amp; Create Makefile — init" />
+<meta property="og:description" content="init() looks for .R scripts in a project root (current working
+directory) that contain a specified prefix and separator. Then, it creates a
+Makefile with rules describing how to run discovered scripts." />
 <meta property="og:image" content="https://netique.github.io/buildr/reference/figures/logo.png" />
 <meta property="og:image:alt" content="buildr: Organize & Run Build Scripts Comfortably" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -135,21 +137,72 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Discover Build Script(s) &amp; Write Them into Makefile</h1>
+    <h1>Discover Build Scripts &amp; Create Makefile</h1>
     <small class="dont-index">Source: <a href='https://github.com/netique/buildr/blob/master/R/init.R'><code>R/init.R</code></a></small>
     <div class="hidden name"><code>init.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Discover Build Script(s) &amp; Write Them into Makefile</p>
+    <p><code>init()</code> looks for <code>.R</code> scripts in a project root (current working
+directory) that contain a specified prefix and separator. Then, it creates a
+<code>Makefile</code> with rules describing how to run discovered scripts.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>init</span><span class='op'>(</span>prefix <span class='op'>=</span> <span class='st'>"build"</span>, path <span class='op'>=</span> <span class='st'>"."</span>, sep <span class='op'>=</span> <span class='st'>"_"</span>, command_args <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>init</span><span class='op'>(</span>
+  prefix <span class='op'>=</span> <span class='st'>"build"</span>,
+  sep <span class='op'>=</span> <span class='st'>"_"</span>,
+  path <span class='op'>=</span> <span class='st'>"."</span>,
+  ignore_case <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  command_args <span class='op'>=</span> <span class='st'>""</span>
+<span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>prefix</th>
+      <td><p><em>character</em>. Prefix that solicited build scripts have in
+common. It is trimmed and stripped in the list of Makefile targets because
+of redundancy. Default to "<code>build</code>".</p></td>
+    </tr>
+    <tr>
+      <th>sep</th>
+      <td><p><em>character</em>. Separator between <code>prefix</code> and "body" of a
+build script filename. It is also stripped in the list of Makefile targets
+because of redundancy. Default to underscore ("<code>_</code>").</p></td>
+    </tr>
+    <tr>
+      <th>path</th>
+      <td><p><em>character</em>. Path being searched. Default to the project
+root (current working directory). If <code>recursive</code> is TRUE (default),
+all subdirectories are searched as well. See <code><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></code> for
+more details on the topic.</p></td>
+    </tr>
+    <tr>
+      <th>ignore_case</th>
+      <td><p><em>logical</em>. Should the search be case-sensitive?</p></td>
+    </tr>
+    <tr>
+      <th>command_args</th>
+      <td><p><em>single character</em>. Command argument(s) to include
+after the recipe call. Not used by default (empty string, see the Usage
+section above).</p></td>
+    </tr>
+    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Character string echoing the terminal.</p>
+    <p>No return value. Called for side effects.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The build script names should all follow a common pattern that is both human
+and machine readable. Filename should incorporate a prefix ("build" by
+default) and the "body" describing what the given script builds. Those two
+essential parts are separated by underscore ("<code>_</code>") by default as it
+helps with the readibility. Both parts are configurable (see below), but we
+encourage you not to make any changes. Do not forget that build scripts are
+matched for a prefix and separator concatenated together, so the script named
+"build.R" won't be recognized, as it doesn't begin with "build_".</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other functions from <code>buildr</code> trinity: 
@@ -160,8 +213,7 @@
     <p>Jan Netik</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='fu'>init</span><span class='op'>(</span><span class='op'>)</span>
 <span class='op'>}</span>
 </div></pre>
