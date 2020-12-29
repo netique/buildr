@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   getting_started: getting_started.html
-last_built: 2020-12-29T20:23Z
+last_built: 2020-12-29T20:38Z
 urls:
   reference: https://netique.github.io/buildr/reference
   article: https://netique.github.io/buildr/articles
