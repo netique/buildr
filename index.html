@@ -102,27 +102,24 @@
   <div class="contents col-md-9">
 <div id="buildr-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#buildr-" class="anchor"></a>buildr <a href="https://netique.github.io/buildr"><img src="reference/figures/logo.png" align="right" height="202"></a>
+<a href="#buildr-" class="anchor"></a>buildr <a href="https://netique.github.io/buildr"><img src="reference/figures/logo.png" align="right" height="180"></a>
 </h1></div>
 <!-- badges: start -->
 
-<div id="warning-development-version-under-construction" class="section level2">
-<h2 class="hasAnchor">
-<a href="#warning-development-version-under-construction" class="anchor"></a>WARNING: DEVELOPMENT VERSION UNDER CONSTRUCTION!</h2>
-<p>To use previous, stable release, see CRAN version (below) or use:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"netique/buildr"</span>, ref <span class="op">=</span> <span class="st">"v0.0.4"</span><span class="op">)</span></code></pre></div>
+<blockquote>
+<p>Organize &amp; Run Build Scripts Comfortably</p>
+</blockquote>
+<p>Warning! This development version is under construction, use the stable CRAN release, or install this development release with caution. Everything should work as intended if you see the green <img src="https://img.shields.io/badge/build-passing-brightgreen"> badge. Basic documentation is provided as well.</p>
 <!-- Working with reproducible reports or any other similar projects often requires to run the script that "builds" the output file in a specified way. One can become tired from repeatedly switching to the build script and sourcing it. -->
 <!-- The `buildr` package does this one simple thing via "RStudio addin" – user can set up the *keyboard shortcut* and run the build script with **one keystroke anywhere anytime.** The second way is to pass `buildr()` (don't forget the parentheses!) command to console which does the same thing. Both ways source the `build.R` (case *insensitive*) file present in the current working directory. -->
-</div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the stable version of <code>buildr</code> from <a href="https://CRAN.R-project.org/package=buildr">CRAN</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"buildr"</span><span class="op">)</span></code></pre></div>
 <p>And the development version from <a href="https://github.com/netique/buildr">GitHub</a> with:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va">rsdemotes</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span><span class="op">}</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"netique/buildr"</span><span class="op">)</span></code></pre></div>
 </div>
@@ -130,10 +127,9 @@
 <h2 class="hasAnchor">
 <a href="#basic-usage" class="anchor"></a>Basic usage</h2>
 <p>This is a basic example which shows you how to solve a common problem:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://netique.github.io/buildr">buildr</a></span><span class="op">)</span></code></pre></div>
 <p>However, much more feasible is to use RStudio’s addins and create <a href="http://rstudio.github.io/rstudioaddins/#keyboard-shorcuts">keyboard shorcut</a> (Tools &gt; Modify Keyboard Shorcuts… &gt; <em>here search for “Buildr”</em>):</p>
-<p><img src="reference/figures/addins_showcase.gif" width="100%"></p>
 </div>
 <div id="license" class="section level2">
 <h2 class="hasAnchor">
