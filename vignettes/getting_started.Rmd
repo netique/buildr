@@ -14,4 +14,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-To be done.
+TODO:
+
+-   explain basic Makefile structure
+
+-   advanced vignete: commandArgs - what to do, how to use
+
+-   

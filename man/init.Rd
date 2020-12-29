@@ -2,18 +2,55 @@
 % Please edit documentation in R/init.R
 \name{init}
 \alias{init}
-\title{Discover Build Script(s) & Write Them into Makefile}
+\title{Discover Build Scripts & Create Makefile}
 \usage{
-init(prefix = "build", path = ".", sep = "_", command_args = "")
+init(
+  prefix = "build",
+  sep = "_",
+  path = ".",
+  ignore_case = TRUE,
+  command_args = ""
+)
+}
+\arguments{
+\item{prefix}{\emph{character}. Prefix that solicited build scripts have in
+common. It is trimmed and stripped in the list of Makefile targets because
+of redundancy. Default to "\code{build}".}
+
+\item{sep}{\emph{character}. Separator between \code{prefix} and "body" of a
+build script filename. It is also stripped in the list of Makefile targets
+because of redundancy. Default to underscore ("\code{_}").}
+
+\item{path}{\emph{character}. Path being searched. Default to the project
+root (current working directory). If \code{recursive} is TRUE (default),
+all subdirectories are searched as well. See \code{\link{list.files}} for
+more details on the topic.}
+
+\item{ignore_case}{\emph{logical}. Should the search be case-sensitive?}
+
+\item{command_args}{\emph{single character}. Command argument(s) to include
+after the recipe call. Not used by default (empty string, see the Usage
+section above).}
 }
 \value{
-Character string echoing the terminal.
+No return value. Called for side effects.
 }
 \description{
-Discover Build Script(s) & Write Them into Makefile
+\code{init()} looks for \code{.R} scripts in a project root (current working
+directory) that contain a specified prefix and separator. Then, it creates a
+\code{Makefile} with rules describing how to run discovered scripts.
+}
+\details{
+The build script names should all follow a common pattern that is both human
+and machine readable. Filename should incorporate a prefix ("build" by
+default) and the "body" describing what the given script builds. Those two
+essential parts are separated by underscore ("\code{_}") by default as it
+helps with the readibility. Both parts are configurable (see below), but we
+encourage you not to make any changes. Do not forget that build scripts are
+matched for a prefix and separator concatenated together, so the script named
+"build.R" won't be recognized, as it doesn't begin with "build_".
 }
 \examples{
-
 \dontrun{
 init()
 }

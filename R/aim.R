@@ -1,8 +1,13 @@
 #' Set Makefile Target
 #'
-#' \code{aim} looks for an existing \code{Makefile}, reads its content, and
-#' offers a list of discovered \code{Makefile} "targets" or "rules" (build
-#' scripts, in our case) in an interactive way.
+#' \code{aim()} looks for an existing \code{Makefile}, reads its content, and
+#' offers a list of discovered \code{Makefile} targets (denoting build scripts,
+#' in our case), all in an interactive way. When the session is not interactive,
+#' or you know the name of the desired target, you can declare it directly in
+#' the \code{target} argument.
+#'
+#'
+#' @param target \emph{character}. The name of the Makefile target to set.
 #'
 #' @family functions from \code{buildr} trinity
 #' @keywords file utilities misc
@@ -19,7 +24,10 @@
 #'
 #' @examples
 #' \dontrun{
-#' aim()
+#' # We have several build scripts in our project root
+#' # and we want to select script called "build_all.R":
+#'
+#' aim(target = "all") # note that "build_" is stripped out by default
 #' }
 #' @export
 aim <- function(target = NULL) {
@@ -30,67 +38,58 @@ aim <- function(target = NULL) {
     ))
   }
 
-  if (!file.exists("Makefile")) {
-    ui_stop(c(
-      "{ui_field('{buildr}')} seems uninitialized.",
-      "Please, call {ui_code('init()')} first."
+  check_makefile()
+
+  lines <- read_lines("Makefile", skip_empty_rows = TRUE)
+
+
+  if (length(lines) %% 2) {
+    ui_oops(c(
+      "It seems that your {ui_path('Makefile')} contains odd number of lines.",
+      "This should not be possible and probably will cause trouble.",
+      "Please check the {ui_path('Makefile')} with {ui_code('edit_makefile()')}."
     ))
   }
 
+  targets <- targets_from_lines(lines)
 
-  lines <- readr::read_lines("Makefile", skip_empty_rows = TRUE)
-  n_lines <- length(lines)
 
-  names_from_mkfl <- lines %>%
-    str_subset(":$") %>%
-    str_remove(":$") %>%
-    str_trim()
-
-  if (length(names_from_mkfl) == 0) {
-    return(ui_oops(c(
-      "{ui_field('{buildr}')} has not discovered any build scripts in {ui_path('Makefile')}.",
-      "Try to call {ui_code('init()')} again with different {ui_field('prefix')} argument."
-    )))
-  }
-
-  if (length(names_from_mkfl) == 1) {
-    return(ui_oops("{ui_field('{buildr}')} has discovered only one build script {ui_field({names_from_mkfl})}.\nTry to call {ui_code('init()')} again with different {ui_value('prefix')} argument,\nor call {ui_code('build()')} to build {ui_value({names_from_mkfl})}."))
-  }
-
-  if (n_lines %% 2) {
-    ui_oops("It seems that your {ui_path('Makefile')} contains odd number of lines,\nwhich should not be possible. Please check.")
-    return(edit_makefile())
-  }
-
-  rules_split <- split(lines, f = names_from_mkfl %>% rep(each = 2))
+  rules_split <- split(lines, f = targets %>% rep(each = 2))
 
   if (is.null(target)) {
-    switch_to <- utils::menu(names_from_mkfl,
+    switch_to <- utils::menu(targets,
       title = ui_todo("Select the build script that will be used from now on.")
     )
 
-    switch_to <- names_from_mkfl[switch_to]
+    switch_to <- targets[switch_to]
 
     if (switch_to == 0) {
       return(
-        ui_oops("You have not chosen any of the scripts.\nThere will be no changes.")
+        ui_oops(c(
+          "You have not chosen any of the scripts.",
+          "There will be no changes."
+        ))
       )
     }
   } else {
     switch_to_trimmed <- target %>% str_remove("\\.[r|R]")
-    if (switch_to_trimmed %in% names_from_mkfl) {
+
+    if (switch_to_trimmed %in% targets) {
       switch_to <- switch_to_trimmed
     } else {
-      ui_stop(c("{ui_value({switch_to_trimmed})} is not a valid target in {ui_path('Makefile')}.", "Pick from {ui_value({names_from_mkfl})}."))
+      ui_stop(c(
+        "{ui_value({switch_to_trimmed})} is not a valid target in {ui_path('Makefile')}.",
+        "Pick from {ui_value({targets})}."
+      ))
     }
   }
 
 
-  new_order <- c(switch_to, setdiff(names_from_mkfl, switch_to))
+  new_order <- c(switch_to, setdiff(targets, switch_to))
 
   rules_split[new_order] %>%
     unlist() %>%
-    readr::write_lines("Makefile")
+    write_lines("Makefile")
 
   ui_done("Set! Use {ui_code('build()')} to build {ui_value({switch_to})}.")
 }

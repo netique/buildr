@@ -56,10 +56,6 @@ However, much more feasible is to use RStudio’s addins and create
 shorcut](http://rstudio.github.io/rstudioaddins/#keyboard-shorcuts)
 (Tools \> Modify Keyboard Shorcuts… \> *here search for “Buildr”*):
 
-``` r
-knitr::include_graphics("man/figures/addins_showcase.gif")
-```
-
 <img src="man/figures/addins_showcase.gif" width="100%" />
 
 ## License

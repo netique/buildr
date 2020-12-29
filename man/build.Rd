@@ -7,10 +7,19 @@
 build()
 }
 \value{
-Character string echoing the terminal.
+No return value. Called for side effects.
 }
 \description{
-Sbalbalbaab.
+\code{build()} is the final function in the workflow, as it instructs RStudio
+Build pane to take the first rule in the \code{Makefile} (set previously with
+\code{aim()}) and runs the respective recipe.
+}
+\details{
+The Rstudio BUild pane is not allways visible and set to take
+\code{Makefiles}. However, the \code{build()} ensures that everything is set
+properly and if not, it offers to edit essential settings automatically for
+you. Note that this action requires RStudio user interface (UI) to reload and
+you have to call \code{build()} again afterwards.
 }
 \examples{
 \dontrun{

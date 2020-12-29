@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r echo=FALSE}
+```{r echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -62,7 +62,7 @@ library(buildr)
 However, much more feasible is to use RStudio's addins and create [keyboard shorcut](http://rstudio.github.io/rstudioaddins/#keyboard-shorcuts) (Tools > Modify Keyboard Shorcuts... > *here search for "Buildr"*):
 
 
-```{r showcase, include = TRUE}
+```{r showcase, echo=FALSE}
 knitr::include_graphics("man/figures/addins_showcase.gif")
 ```
 

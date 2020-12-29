@@ -7,3 +7,8 @@
 ^cran-comments\.md$
 ^CODE_OF_CONDUCT\.md$
 ^logo\.png$
+^pkgdown$
+^tests$
+^_pkgdown\.yml$
+^docs$
+^README\.Rmd$

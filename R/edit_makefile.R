@@ -7,7 +7,7 @@
 #' @seealso The [documentation for GNU
 #'   Make](https://www.gnu.org/software/make/manual/html_node/).
 #'
-#' @importFrom rstudioapi executeCommand navigateToFile hasFun
+#' @importFrom rstudioapi executeCommand navigateToFile hasFun isAvailable
 #' @importFrom usethis ui_info ui_oops ui_todo
 #'
 #' @export
