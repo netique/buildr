@@ -1,15 +1,15 @@
 Name: Init
-Description: init-desc
+Description: Initializes a Makefile in project root with automatically discovered build scripts.
 Binding: init
 Interactive: false
 
 Name: Aim
-Description: aim-desc
+Description: Sets one of the Makefile targets to be recognized by RStudio's Build pane.
 Binding: aim
 Interactive: false
 
 Name: Build
-Description: build-desc
+Description: Builds the first Makefile entry (set by user or via aim()).
 Binding: build
 Interactive: false
 

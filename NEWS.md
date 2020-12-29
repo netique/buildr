@@ -5,12 +5,12 @@
 -   "trinity" of essential functions introduced:
 
     -   `init()` initializes a `Makefile` in project root with automatically discovered build scripts
-    -   `aim()` sets one of the `Makefile` targets to be recognized in RStudio's *Build* pane (prioritization)
+    -   `aim()` sets one of the `Makefile` targets to be recognized by RStudio's *Build* pane (prioritization)
     -   `build()` builds the first `Makefile` entry (set by user or via `aim()`)
 
     ## Technicals
 
--   `pkgdown` is used to build its website with news, vignettes and documentation (tab Reference)
+-   `pkgdown` is used to build package website with news, vignettes and documentation (see tab Reference)
 
 -   partly covered with `testthat` tests
 
