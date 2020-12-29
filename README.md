@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# buildr <a href='https://netique.github.io/buildr'><img src='man/figures/logo.png' align="right" height="202" /></a>
+# buildr <a href='https://netique.github.io/buildr'><img src='man/figures/logo.png' align="right" height="180" /></a>
 
 <!-- badges: start -->
 
@@ -14,16 +14,15 @@ Status](https://img.shields.io/github/workflow/status/netique/buildr/R-CMD-check
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
-## WARNING: DEVELOPMENT VERSION UNDER CONSTRUCTION\!
+> Organize & Run Build Scripts Comfortably
 
-To use previous, stable release, see CRAN version (below) or use:
-
-``` r
-remotes::install_github("netique/buildr", ref = "v0.0.4")
-```
+Warning! This development version is under construction, use the stable
+CRAN release, or install this development release with caution.
+Everything should work as intended if you see the green
+![](https://img.shields.io/badge/build-passing-brightgreen) badge. Basic
+documentation is provided as well.
 
 <!-- Working with reproducible reports or any other similar projects often requires to run the script that "builds" the output file in a specified way. One can become tired from repeatedly switching to the build script and sourcing it. -->
-
 <!-- The `buildr` package does this one simple thing via "RStudio addin" – user can set up the *keyboard shortcut* and run the build script with **one keystroke anywhere anytime.** The second way is to pass `buildr()` (don't forget the parentheses!) command to console which does the same thing. Both ways source the `build.R` (case *insensitive*) file present in the current working directory. -->
 
 ## Installation
@@ -54,12 +53,10 @@ library(buildr)
 However, much more feasible is to use RStudio’s addins and create
 [keyboard
 shorcut](http://rstudio.github.io/rstudioaddins/#keyboard-shorcuts)
-(Tools \> Modify Keyboard Shorcuts… \> *here search for “Buildr”*):
-
-<img src="man/figures/addins_showcase.gif" width="100%" />
+(Tools &gt; Modify Keyboard Shorcuts… &gt; *here search for “Buildr”*):
 
 ## License
 
 This program is free software and you can redistribute it and or modify
-it under the terms of the [GNU
-GPL 3](https://www.gnu.org/licenses/gpl-3.0.en.html).
+it under the terms of the [GNU GPL
+3](https://www.gnu.org/licenses/gpl-3.0.en.html).

@@ -42,6 +42,19 @@ build <- function() {
 }
 
 
+#' Build Addin wrapper
+#'
+#' wrapping inside try defuses RStudio warnings about code execution
+#'
+#' @noRd
+#' @keywords internal
+build_addin <- function() {
+  try({build()})
+}
+
+
+
+
 #' Check if build pane is set-up
 #'
 #' @keywords internal
