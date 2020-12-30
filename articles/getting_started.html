@@ -27,7 +27,13 @@
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-B8CQ89BFM4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B8CQ89BFM4');
+</script>
 </head>
 <body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
@@ -103,17 +109,84 @@
 
     
     
-<p>TODO:</p>
+<p>This vignette extends what <code>README</code> or <a href="https://netique.github.io/buildr">buildr</a> homepage already briefly described. After reading it, you’ll be familiar with:</p>
 <ul>
-<li><p>explain basic Makefile structure</p></li>
-<li><p>advanced vignete: commandArgs - what to do, how to use</p></li>
-<li>
+<li>how to work with <a href="https://netique.github.io/buildr">buildr</a> using your own keyboard shortcuts</li>
+<li>how <a href="https://netique.github.io/buildr">buildr</a> works under the hood</li>
+<li>what is a <code>Makefile</code> and how <a href="https://netique.github.io/buildr">buildr</a> uses it</li>
+<li>some advanced usage</li>
 </ul>
+<div id="buildr-rstudio-️" class="section level2">
+<h2 class="hasAnchor">
+<a href="#buildr-rstudio-%EF%B8%8F" class="anchor"></a><code>{buildr}</code> + RStudio = ❤️</h2>
+<p>It’s easy to work with <a href="https://netique.github.io/buildr">buildr</a> by printing function calls in your <code>R</code> console. However, much more feasible is to use <a href="https://netique.github.io/buildr">buildr</a> as RStudio Addin, which plays nicely with keyboard shortcuts, adding to the comfort. <a href="https://netique.github.io/buildr">buildr</a> addin commands are available below your toolbar in RStudio just upon the installation:</p>
+<p><img src="addins_showcase.gif" width="100%"></p>
+<blockquote>
+<p>Well, that’s pretty neat, but my time is precious and I don’t mean to spend it by clicking around that tiny toolbar.</p>
+</blockquote>
+<p>Likewise! Here comes the keyboard shortcuts. The quickest way how to set them up is to use <code><a href="../reference/edit_shortcuts.html">buildr::edit_shortcuts()</a></code> as shown here (for <code><a href="../reference/build.html">build()</a></code> addin command):</p>
+<p><img src="shortcuts_showcase.gif" width="100%"></p>
+<p>Note that all three functions are supported as addin commands. If you stick with recommended defaults, there is no need to use anything else. The only function that may need a richer user input is <code><a href="../reference/init.html">init()</a></code>. Let’s describe it in more detail.</p>
 </div>
+<div id="lets-see-what-you-got-there" class="section level2">
+<h2 class="hasAnchor">
+<a href="#lets-see-what-you-got-there" class="anchor"></a>Let’s see what you got there</h2>
+<p>The <code><a href="../reference/init.html">init()</a></code> function should be called first (and only occasionally afterwards). It searches your project root (directory where your <code>.Rproj</code> file resides) and looks for <code>.R</code> scripts that shares a common prefix separated from the rest of a file name by a separator (“build” and "_" by default, respectively). Although it is possible to use different prefix and separator, we recommend that you stick with the default. For more details, please see the reference (documentation) for the <code><a href="../reference/init.html">init()</a></code> function.</p>
+<p>Those “build scripts” can do really anything, that’s up to you. Commonly, they share the following:</p>
+<ol style="list-style-type: decimal">
+<li>loading of libraries</li>
+<li>sourcing some <code>.R</code> scripts, e.g., <code><a href="https://rdrr.io/r/base/source.html">source("run_this.R", encoding = "UTF-8", local = TRUE)</a></code> this could be:</li>
+</ol>
+<ul>
+<li>downloading any remote data</li>
+<li>cleaning them</li>
+<li>estimating “heavier” models, saving their output</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>finally, some <a href="https://github.com/rstudio/rmarkdown">rmarkdown</a> call, say <code><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">rmarkdown::render("my_report.Rmd")</a></code>
+</li>
+</ol>
+<p>Here is <code><a href="../reference/init.html">init()</a></code> in action:</p>
+<p><img src="init_showcase.gif" width="100%"></p>
+</div>
+<div id="line-up-your-bricks" class="section level2">
+<h2 class="hasAnchor">
+<a href="#line-up-your-bricks" class="anchor"></a>Line up your bricks</h2>
+<p>Once the <a href="https://netique.github.io/buildr">buildr</a> discovered your build scripts, it automatically creates a <code>Makefile</code> in your project root for you and populates it with rules describing how to run your build scripts. Let’s talk about <code>Makefile</code>s more (<strong>you can skip this section if you just want to use the package and do your stuff</strong>).</p>
+<p><code>Makefile</code>s have a long history and are very useful in software development (see the <a href="https://www.gnu.org/software/make/manual/html_node/">full ocumentation for GNU Make</a>). They are powerful enough that they can instruct complicated compilers on how to build an application or even an operating system, and running your build script is nothing to them. They typically consist of so-called “rules” which comprises of target and its recipe (in uttermost simplicity):</p>
+<pre><code>target:
+  recipe</code></pre>
+<p>A target is usually a file name, but in our case, it is arbitrary string uniquely identifying given <code>Makefile</code> rule. A recipe consist of a command describing what to do. In our case, we want to source a <code>.R</code> script, say <code>build_all.R</code>, so our rule would look like this:</p>
+<pre><code>all:
+  @Rscript -e 'source("build_all.R")'</code></pre>
+<p>The target of our rule is “all” and the recipe instructs the computer to quietly (hence the <code><a href="https://rdrr.io/r/base/slotOp.html">@</a></code>) start <code>R</code> and source the script “build_all.R”, which resides in your project root. Note that <code>Makefile</code>s are whitespace sensitive. A tab must always precede the beginning of the recipe. <strong>Again, you don’t have to bother with any of this, as the <a href="https://netique.github.io/buildr">buildr</a> does everything for you.</strong></p>
+<p>Now you may wonder why this section is called “Line up your bricks”? That’s simple. The purpose of <code><a href="../reference/aim.html">aim()</a></code> is to line up the <code>Makefile</code> rules in a particular order, because the Rstudio Build pane always takes the first rule available (in fact, you can specify the target manually, but it is buried deep inside the GUI). The goal of <code><a href="../reference/aim.html">aim()</a></code> is to list your <code>Makefile</code> rules and show them so that you can pick the one you are interested in (i.e. to prioritize it). Your choice then projects in the actual <code>Makefile</code> – the desired rule is in the first place. That’s what <code><a href="../reference/aim.html">aim()</a></code> does. In case you already know the target of given rule, you can just supply it directly in the call like this: <code><a href="../reference/aim.html">aim(target = "all")</a></code> or even simpler <code><a href="../reference/aim.html">aim("all")</a></code>.</p>
+<p>Here is <code><a href="../reference/aim.html">aim()</a></code> in action:</p>
+<p><img src="aim_showcase.gif" width="100%"></p>
+</div>
+<div id="build" class="section level2">
+<h2 class="hasAnchor">
+<a href="#build" class="anchor"></a>Build</h2>
+<p>Now that everything is set-up, your only task is to call <code><a href="../reference/build.html">build()</a></code>. Under the hood, <a href="https://netique.github.io/buildr">buildr</a> makes sure that RStudio is set appropriately to handle the <code>Makefile</code>. RStudio Build pane may be set for building packages or websites, so it is crucial to ensure your script is run nice and clean. In case something is wrong, <a href="https://netique.github.io/buildr">buildr</a> automatically offers you a remedy.</p>
+<p>Here is <code><a href="../reference/build.html">build()</a></code> in action:</p>
+<p><img src="build_showcase.gif" width="100%"></p>
+</div>
+<div id="whats-next" class="section level2">
+<h2 class="hasAnchor">
+<a href="#whats-next" class="anchor"></a>What’s next?</h2>
+<p>If you looked in the documentation of the package, you may wonder what is the purpose of <code>command_args</code> argument. When the build script is processed in RStudio Build pane, the recipe may be accompanied by command argument. This argument can be picked up by <code>R</code> and used in your build script to further specify how it should be run. In order to use it, state your command argument when you initialize the <code>Makefile</code> using <code><a href="../reference/init.html">init()</a></code> or manually. Note that the command argument will be placed after <em>each</em> rule’s recipe. Then, include the following line to your script:</p>
+<pre><code>command_args &lt;- commandArgs(trailingOnly = TRUE)
+</code></pre>
+<p>The object <code>command_args</code> that you created by the assignment now comprises the command argument stated in <code>Makefile</code> and you can further use it inside your script. E.g., you can query whether specific command argument was passed by <code>if ("my_arg" %in% command_args) {print("Yes")} else {print("No")}</code>.</p>
+<p>And as always, happy building!</p>
+</div>
+  </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 

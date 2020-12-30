@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>buildr: Organize &amp; Run Build Scripts Comfortably — buildr-package • buildr</title>
+<title>Show RStudio Keyboard Shortcuts Popup — edit_shortcuts • buildr</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,16 +46,9 @@
 
 
 
-<meta property="og:title" content="buildr: Organize &amp; Run Build Scripts Comfortably — buildr-package" />
-<meta property="og:description" content="
-Working with reproducible reports or any other
-    similar projects often requires to run the script that builds the
-    output file in a specified way. 'buildr' can help you organize, modify
-    and run those scripts in a comfort way. The package provides a set of
-    functions that interactively guides you through the process and that
-    are available as 'RStudio' Addin, meaning you can set up the keyboard
-    shortcuts, enabling you to choose and run the desired build script
-    with one keystroke anywhere anytime." />
+<meta property="og:title" content="Show RStudio Keyboard Shortcuts Popup — edit_shortcuts" />
+<meta property="og:description" content="Shows popup window with RStudio keyboard shortcuts. Uses rstudioapi.
+Applicable only in RStudio and in interactive session." />
 <meta property="og:image" content="https://netique.github.io/buildr/reference/figures/logo.png" />
 <meta property="og:image:alt" content="buildr: Organize & Run Build Scripts Comfortably" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -153,37 +146,35 @@ Working with reproducible reports or any other
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>buildr: Organize &amp; Run Build Scripts Comfortably</h1>
-    <small class="dont-index">Source: <a href='https://github.com/netique/buildr/blob/master/R/buildr-package.R'><code>R/buildr-package.R</code></a></small>
-    <div class="hidden name"><code>buildr-package.Rd</code></div>
+    <h1>Show RStudio Keyboard Shortcuts Popup</h1>
+    <small class="dont-index">Source: <a href='https://github.com/netique/buildr/blob/master/R/edit_shortcuts.R'><code>R/edit_shortcuts.R</code></a></small>
+    <div class="hidden name"><code>edit_shortcuts.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><img src='figures/logo.png' align='right' alt='logo' width='120' /></p>
-<p>Working with reproducible reports or any other
-    similar projects often requires to run the script that builds the
-    output file in a specified way. 'buildr' can help you organize, modify
-    and run those scripts in a comfort way. The package provides a set of
-    functions that interactively guides you through the process and that
-    are available as 'RStudio' Addin, meaning you can set up the keyboard
-    shortcuts, enabling you to choose and run the desired build script
-    with one keystroke anywhere anytime.</p>
+    <p>Shows popup window with RStudio keyboard shortcuts. Uses <code>rstudioapi</code>.
+Applicable only in RStudio and in interactive session.</p>
     </div>
 
+    <pre class="usage"><span class='fu'>edit_shortcuts</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <div class='dont-index'><p>Useful links:</p><ul>
-<li><p><a href='https://netique.github.io/buildr'>https://netique.github.io/buildr</a></p></li>
-<li><p>Report bugs at <a href='https://github.com/netique/buildr/issues'>https://github.com/netique/buildr/issues</a></p></li>
-</ul>
+    <p>No return value. Called for side effect.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-</div>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+    <p>You can quicky reach out solicited addin function by typing it in the
+<code>Filter...</code> box in the very top of the popup window. Then double click at the
+blank space just next to the addin function name and press down desired key
+or key combination. Apply the changes and from now on, just call the function
+with one keystroke.</p>
 
-    <p><strong>Maintainer</strong>: Jan Netik <a href='mailto:netikja@gmail.com'>netikja@gmail.com</a> (<a href='https://orcid.org/0000-0002-3888-3203'>ORCID</a>)</p>
-
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>edit_schortcuts</span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
