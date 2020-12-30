@@ -93,14 +93,3 @@ aim <- function(target = NULL) {
 
   ui_done("Set! Use {ui_code('build()')} to build {ui_value({switch_to})}.")
 }
-
-
-#' Aim Addin wrapper
-#'
-#' wrapping inside try defuses RStudio warnings about code execution
-#'
-#' @noRd
-#' @keywords internal
-aim_addin <- function() {
-  try({aim()})
-}

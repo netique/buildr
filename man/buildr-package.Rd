@@ -10,13 +10,12 @@
 
 Working with reproducible reports or any other
     similar projects often requires to run the script that builds the
-    output file in a specified way. One can become tired from repeatedly
-    switching to the build script and sourcing it. The 'buildr' package
-    does this one simple thing via 'RStudio' addin – user can set up the
-    keyboard shortcut and run the build script with one keystroke anywhere
-    anytime. The second way is to pass buildr() command to console which
-    does the same thing. Both ways source the build.R (case insensitive)
-    file present in the current working directory.
+    output file in a specified way. 'buildr' can help you organize, modify
+    and run those scripts in a comfort way. The package provides a set of
+    functions that interactively guides you through the process and that
+    are available as 'RStudio' Addin, meaning you can set up the keyboard
+    shortcuts, enabling you to choose and run the desired build script
+    with one keystroke anywhere anytime.
 }
 \seealso{
 Useful links:

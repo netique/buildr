@@ -1,10 +1,15 @@
+Name: Init
+Description: Initializes a Makefile in project root with automatically discovered build scripts.
+Binding: init_addin
+Interactive: false
+
 Name: Aim
-Description: Sets one of the Makefile targets to be recognized by RStudio's Build pane.
+Description: Sets one of the Makefile targets to be recognized by RStudio's Build pane. Run init() first.
 Binding: aim_addin
 Interactive: false
 
 Name: Build
-Description: Builds the first Makefile entry (set by user or via aim()).
+Description: Builds the first Makefile entry (set by aim()).
 Binding: build_addin
 Interactive: false
 
