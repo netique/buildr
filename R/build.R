@@ -1,16 +1,16 @@
 #' Run Selected Build Script
 #'
-#' \code{build()} is the final function in the workflow, as it instructs RStudio
-#' Build pane to take the first rule in the \code{Makefile} (set previously with
-#' \code{aim()}) and runs the respective recipe.
+#' `build()` is the final function in the workflow, as it instructs 'RStudio'
+#' Build pane to take the first rule in the `Makefile` (set previously with
+#' `aim()`) and runs the respective recipe.
 #'
-#' The Rstudio BUild pane is not allways visible and set to take
-#' \code{Makefiles}. However, the \code{build()} ensures that everything is set
-#' properly and if not, it offers to edit essential settings automatically for
-#' you. Note that this action requires RStudio user interface (UI) to reload and
-#' you have to call \code{build()} again afterwards.
+#' The 'Rstudio' Build pane is not allways visible and set to take `Makefiles`.
+#' However, the `build()` ensures that everything is set properly and if not, it
+#' offers you to automatically edit necessary settings automatically for you.
+#' Note that this action forces 'RStudio' user interface (UI) to reload and you
+#' have to call `build()` again afterwards.
 #'
-#' @family functions from \code{buildr} trinity
+#' @family functions from `buildr` trinity
 #' @keywords file utilities misc
 #'
 #' @return No return value. Called for side effects.

@@ -1,15 +1,15 @@
 #' Set Makefile Target
 #'
-#' \code{aim()} looks for an existing \code{Makefile}, reads its content, and
-#' offers a list of discovered \code{Makefile} targets (denoting build scripts,
-#' in our case), all in an interactive way. When the session is not interactive,
-#' or you know the name of the desired target, you can declare it directly in
-#' the \code{target} argument.
+#' `aim()` looks for an existing `Makefile`, reads its content, and offers a
+#' list of discovered `Makefile` targets (denoting build scripts, in our case),
+#' all in an interactive way. When the session is not interactive, or you know
+#' the name of the desired target, you can declare it directly in the `target`
+#' argument.
 #'
 #'
-#' @param target \emph{character}. The name of the Makefile target to set.
+#' @param target *Character*. The name of the Makefile target to set.
 #'
-#' @family functions from \code{buildr} trinity
+#' @family functions from `buildr` trinity
 #' @keywords file utilities misc
 #'
 #' @return No return value. Called for side effects.

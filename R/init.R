@@ -7,29 +7,33 @@
 #' The build script names should all follow a common pattern that is both human
 #' and machine readable. Filename should incorporate a prefix ("build" by
 #' default) and the "body" describing what the given script builds. Those two
-#' essential parts are separated by underscore ("\code{_}") by default as it
+#' essential parts are separated by underscore (i.e. "_")  by default as it
 #' helps with the readibility. Both parts are configurable (see below), but we
 #' encourage you not to make any changes. Do not forget that build scripts are
 #' matched for a prefix and separator concatenated together, so the script named
-#' "build.R" won't be recognized, as it doesn't begin with "build_".
+#' "build.R" won't be recognized, as it doesn't begin with "build_". Follow the
+#' example below on how to include "build.R".
 #'
-#' @param prefix \emph{character}. Prefix that solicited build scripts have in
-#'   common. It is trimmed and stripped in the list of Makefile targets because
-#'   of redundancy. Default to "\code{build}".
-#' @param sep \emph{character}. Separator between \code{prefix} and "body" of a
-#'   build script filename. It is also stripped in the list of Makefile targets
-#'   because of redundancy. Default to underscore ("\code{_}").
-#' @param path \emph{character}. Path being searched. Default to the project
-#'   root (current working directory). If \code{recursive} is TRUE (default),
-#'   all subdirectories are searched as well. See \code{\link{list.files}} for
-#'   more details on the topic.
-#' @param ignore_case \emph{logical}. Should the search be case-sensitive?
-#' @param command_args \emph{single character}. Command argument(s) to include
-#'   after the recipe call. Not used by default (empty string, see the Usage
-#'   section above).
+#' @param prefix \emph{Character}. Prefix that solicited build scripts have in
+#'   common. It is trimmed and stripped in the list of \code{Makefile} targets
+#'   because of redundancy. Default to "build".
+#' @param sep \emph{Character}. Separator between \code{prefix} and "body" of a
+#'   build script filename. It is also stripped in the list of \code{Makefile}
+#'   targets because of redundancy. Default to underscore (i.e. "_").
+#' @param path \emph{Character}. Path being searched. Default to the project
+#'   root (i.e. ".", the current working directory, call \code{getwd()} to print
+#'   it). See \code{\link{list.files}} for more details on the topic.
+#' @param ignore_case \emph{Logical}. Should the search be case-sensitive?
+#'   Default to FALSE.
+#' @param command_args \emph{Single character}. Command argument(s) to include
+#'   after the recipe call. Command argument can be picked up by your script
+#'   with \code{\link{commandArgs}}. See
+#'   \code{\link{vignette("know_your_buildr")}} for more details. Empty string by
+#'   default (not in use).
 #'
 #' @family functions from \code{buildr} trinity
 #' @keywords file utilities misc
+#' @noMd
 #'
 #' @return No return value. Called for side effects.
 #'
@@ -45,7 +49,13 @@
 #'
 #' @examples
 #' \dontrun{
+#' # if you stick with the defaults, run:
 #' init()
+#'
+#' # if you want to include "build.R",
+#' # you have to tell {buildr} to
+#' # use an empty separator, like:
+#' init(sep = "")
 #' }
 #' @export
 init <- function(prefix = "build", sep = "_", path = ".", ignore_case = TRUE, command_args = "") {

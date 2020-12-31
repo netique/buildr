@@ -7,17 +7,17 @@
 aim(target = NULL)
 }
 \arguments{
-\item{target}{\emph{character}. The name of the Makefile target to set.}
+\item{target}{\emph{Character}. The name of the Makefile target to set.}
 }
 \value{
 No return value. Called for side effects.
 }
 \description{
-\code{aim()} looks for an existing \code{Makefile}, reads its content, and
-offers a list of discovered \code{Makefile} targets (denoting build scripts,
-in our case), all in an interactive way. When the session is not interactive,
-or you know the name of the desired target, you can declare it directly in
-the \code{target} argument.
+\code{aim()} looks for an existing \code{Makefile}, reads its content, and offers a
+list of discovered \code{Makefile} targets (denoting build scripts, in our case),
+all in an interactive way. When the session is not interactive, or you know
+the name of the desired target, you can declare it directly in the \code{target}
+argument.
 }
 \examples{
 \dontrun{

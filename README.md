@@ -21,12 +21,12 @@ Check](https://img.shields.io/github/workflow/status/netique/buildr/R-CMD-check)
 
 Working with reproducible reports or any other similar projects often
 requires to run the script that “builds” the output file in a specified
-way. `{buildr}` can help you organize, modify and run those scripts in a
-comfort way. The package provides a set of functions that
-**interactively guides you through the process** and that are available
-as [RStudio Addin](https://rstudio.github.io/rstudioaddins/), meaning
-you can set up the **keyboard shortcuts**, enabling you to choose and
-run the desired build script with **one keystroke anywhere anytime.**
+way. `{buildr}` can help you organize, modify and comfortably run those
+scripts. The package provides a set of functions that **interactively
+guides you through the process** and that are available as [RStudio
+Addin](https://rstudio.github.io/rstudioaddins/), meaning you can set up
+the **keyboard shortcuts**, enabling you to choose and run the desired
+build script with **one keystroke anywhere anytime.**
 
 ## Installation
 
@@ -64,11 +64,11 @@ occasionally.
 1.  First, call `init()`, which initializes a special `Makefile` in
     project root with automatically discovered build scripts that share
     a common prefix and separator (“build” and "\_“, by default).
-    `Makefile` is a standard”recipe book" which tells sowftware how it
-    should be compiled. It’s so general it can serve perfectly for our
-    purposes. See the [documentation for GNU
+    `Makefile` is a standard”recipe book" which tells the software how
+    it should be compiled. It’s so general it can serve perfectly for
+    our purposes. See the [documentation for GNU
     Make](https://www.gnu.org/software/make/manual/html_node/) or read
-    `vignette("getting_started")` vignette of `{buildr}`.
+    `vignette("know_your_buildr")` vignette of `{buildr}`.
 
 2.  If you have only one build script, you may just proceed by calling
     `build()`. However, **the strength of `{buildr}` lies in the ease
@@ -83,9 +83,9 @@ occasionally.
     entry that you have previously set with `aim()`.
 
 That’s it! To learn more about `{buildr}`, `Makefile`s or other relevant
-stuff, please refer yourself to the `vignette("getting_started")`
+stuff, please refer yourself to the `vignette("know_your_buildr")`
 vignette, which describes how to use `{buildr}` as an Addin, **how to
-define your keayboard shorcut** and much more.
+define your keyboard shortcut** and much more.
 
 Happy building!
 
