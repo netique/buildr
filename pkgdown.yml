@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   know_your_buildr: know_your_buildr.html
-last_built: 2020-12-31T16:11Z
+last_built: 2020-12-31T16:38Z
 urls:
   reference: https://netique.github.io/buildr/reference
   article: https://netique.github.io/buildr/articles
