@@ -31,7 +31,7 @@ Default to FALSE.}
 \item{command_args}{\emph{Single character}. Command argument(s) to include
 after the recipe call. Command argument can be picked up by your script
 with \code{\link{commandArgs}}. See
-\code{\link{vignette("know_your_buildr")}} for more details. Empty string by
+\code{vignette("know_your_buildr")} for more details. Empty string by
 default (not in use).}
 }
 \value{
