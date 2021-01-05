@@ -27,7 +27,7 @@ template:
       card: summary_large_image
   params:
     ganalytics: G-B8CQ89BFM4
-    # docsearch:
-      # api_key:
-      # index_name:
+    docsearch:
+      api_key: buildr
+      index_name: e458fb64769df53ec0272e7b819ed428
     bootswatch: flatly
