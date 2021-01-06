@@ -80,7 +80,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="articles/know_your_buildr.html">Know your {buildr}</a>
+      <a href="articles/articles/know_your_buildr.html">Know your {buildr}</a>
     </li>
   </ul>
 </li>
@@ -124,11 +124,11 @@
 <p>Organize &amp; Run Build Scripts Comfortably</p>
 </blockquote>
 <!-- Warning! This development version is under construction, use the stable CRAN release, or install this development release with caution. Everything should work as intended if you see the green ![](https://img.shields.io/badge/build-passing-brightgreen) badge. Basic documentation is provided as well. -->
-<p>Working with reproducible reports or any other similar projects often requires to run the script that “builds” the output file in a specified way. <a href="https://netique.github.io/buildr">buildr</a> can help you organize, modify and comfortably run those scripts. The package provides a set of functions that <strong>interactively guides you through the process</strong> and that are available as <a href="https://rstudio.github.io/rstudioaddins/">RStudio Addin</a>, meaning you can set up the <strong>keyboard shortcuts</strong>, enabling you to choose and run the desired build script with <strong>one keystroke anywhere anytime.</strong></p>
+<p>Working with reproducible reports or any other similar projects often requires to run the script that “builds” the output file in a specified way. <a href="https://netique.github.io/buildr/">buildr</a> can help you organize, modify and comfortably run those scripts. The package provides a set of functions that <strong>interactively guides you through the process</strong> and that are available as <a href="https://rstudio.github.io/rstudioaddins/">RStudio Addin</a>, meaning you can set up the <strong>keyboard shortcuts</strong>, enabling you to choose and run the desired build script with <strong>one keystroke anywhere anytime.</strong></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the stable version of <a href="https://netique.github.io/buildr">buildr</a> (<a href="https://CRAN.R-project.org/package=buildr"><img src="https://img.shields.io/cran/v/buildr?label=CRAN" alt="CRAN"></a>) from <a href="https://CRAN.R-project.org/package=buildr">CRAN</a> with:</p>
+<p>You can install the stable version of <a href="https://netique.github.io/buildr/">buildr</a> (<a href="https://CRAN.R-project.org/package=buildr"><img src="https://img.shields.io/cran/v/buildr?label=CRAN" alt="CRAN"></a>) from <a href="https://CRAN.R-project.org/package=buildr">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"buildr"</span><span class="op">)</span></code></pre></div>
 <p>And the development version (<a href="https://github.com/netique/buildr"><img src="https://img.shields.io/github/r-package/v/netique/buildr?label=devel" alt="DESCRIPTION version)"></a>) from <a href="https://github.com/netique/buildr">GitHub</a> with:</p>
@@ -141,18 +141,18 @@
 <a href="#load-the-package" class="anchor"></a>Load the package</h2>
 <p>First, load the package with:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://netique.github.io/buildr">buildr</a></span><span class="op">)</span></code></pre></div>
-<p>You can skip the step above and prepend <code>buildr::</code> to every function call. That could be handy if you use <a href="https://netique.github.io/buildr">buildr</a> functions only occasionally.</p>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://netique.github.io/buildr/">buildr</a></span><span class="op">)</span></code></pre></div>
+<p>You can skip the step above and prepend <code>buildr::</code> to every function call. That could be handy if you use <a href="https://netique.github.io/buildr/">buildr</a> functions only occasionally.</p>
 </div>
 <div id="use-buildr-in-three-steps" class="section level2">
 <h2 class="hasAnchor">
 <a href="#use-buildr-in-three-steps" class="anchor"></a>Use <code>{buildr}</code> in three steps</h2>
 <ol>
-<li><p>First, call <code><a href="reference/init.html">init()</a></code>, which initializes a special <code>Makefile</code> in project root with automatically discovered build scripts that share a common prefix and separator (“build” and “_“, by default). <code>Makefile</code> is a standard”recipe book" which tells the software how it should be compiled. It’s so general it can serve perfectly for our purposes. See the <a href="https://www.gnu.org/software/make/manual/html_node/">documentation for GNU Make</a> or read <code><a href="articles/know_your_buildr.html">vignette("know_your_buildr")</a></code> vignette of <a href="https://netique.github.io/buildr">buildr</a>.</p></li>
-<li><p>If you have only one build script, you may just proceed by calling <code><a href="reference/build.html">build()</a></code>. However, <strong>the strength of <a href="https://netique.github.io/buildr">buildr</a> lies in the ease with which you can choose the desired script and run it when your project is populated with many of them</strong>. To do so, call <code><a href="reference/aim.html">aim()</a></code> and choose among the scripts <a href="https://netique.github.io/buildr">buildr</a> discovered for you. <code><a href="reference/aim.html">aim()</a></code> will set one of the <code>Makefile</code> targets to be recognized by RStudio Build pane.</p></li>
+<li><p>First, call <code><a href="reference/init.html">init()</a></code>, which initializes a special <code>Makefile</code> in project root with automatically discovered build scripts that share a common prefix and separator (“build” and “_“, by default). <code>Makefile</code> is a standard”recipe book" which tells the software how it should be compiled. It’s so general it can serve perfectly for our purposes. See the <a href="https://www.gnu.org/software/make/manual/html_node/">documentation for GNU Make</a> or read <code><a href="articles/know_your_buildr.html">vignette("know_your_buildr")</a></code> vignette of <a href="https://netique.github.io/buildr/">buildr</a>.</p></li>
+<li><p>If you have only one build script, you may just proceed by calling <code><a href="reference/build.html">build()</a></code>. However, <strong>the strength of <a href="https://netique.github.io/buildr/">buildr</a> lies in the ease with which you can choose the desired script and run it when your project is populated with many of them</strong>. To do so, call <code><a href="reference/aim.html">aim()</a></code> and choose among the scripts <a href="https://netique.github.io/buildr/">buildr</a> discovered for you. <code><a href="reference/aim.html">aim()</a></code> will set one of the <code>Makefile</code> targets to be recognized by RStudio Build pane.</p></li>
 <li><p>The last step that you’ll need and use most of the time is the actual “building”. Simply call <code><a href="reference/build.html">build()</a></code> to run the first <code>Makefile</code> entry that you have previously set with <code><a href="reference/aim.html">aim()</a></code>.</p></li>
 </ol>
-<p>That’s it! To learn more about <a href="https://netique.github.io/buildr">buildr</a>, <code>Makefile</code>s or other relevant stuff, please refer yourself to the <code><a href="articles/know_your_buildr.html">vignette("know_your_buildr")</a></code> vignette, which describes how to use <a href="https://netique.github.io/buildr">buildr</a> as an Addin, <strong>how to define your keyboard shortcut</strong> and much more.</p>
+<p>That’s it! To learn more about <a href="https://netique.github.io/buildr/">buildr</a>, <code>Makefile</code>s or other relevant stuff, please refer yourself to the <code><a href="articles/know_your_buildr.html">vignette("know_your_buildr")</a></code> vignette, which describes how to use <a href="https://netique.github.io/buildr/">buildr</a> as an Addin, <strong>how to define your keyboard shortcut</strong> and much more.</p>
 <p>Happy building!</p>
 </div>
 <div id="license" class="section level2">
@@ -171,7 +171,7 @@
 </li>
 <li>Browse source code at <br><a href="https://github.com/netique/buildr/">https://​github.com/​netique/​buildr/​</a>
 </li>
-<li>Report a bug at <br><a href="https://github.com/netique/buildr/issues">https://​github.com/​netique/​buildr/​issues</a>
+<li>Report a bug at <br><a href="https://github.com/netique/buildr/issues/">https://​github.com/​netique/​buildr/​issues/​</a>
 </li>
 </ul>
 </div>
