@@ -16,8 +16,8 @@ Description: Working with reproducible reports or any other
     shortcuts, enabling you to choose and run the desired build script
     with one keystroke anywhere anytime.
 License: GPL (>= 3)
-URL: https://netique.github.io/buildr
-BugReports: https://github.com/netique/buildr/issues
+URL: https://netique.github.io/buildr/
+BugReports: https://github.com/netique/buildr/issues/
 Imports: 
     rstudioapi,
     usethis,

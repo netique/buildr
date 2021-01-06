@@ -20,8 +20,8 @@ Working with reproducible reports or any other
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://netique.github.io/buildr}
-  \item Report bugs at \url{https://github.com/netique/buildr/issues}
+  \item \url{https://netique.github.io/buildr/}
+  \item Report bugs at \url{https://github.com/netique/buildr/issues/}
 }
 
 }

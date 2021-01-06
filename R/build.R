@@ -10,7 +10,7 @@
 #' Note that this action forces 'RStudio' user interface (UI) to reload and you
 #' have to call `build()` again afterwards.
 #'
-#' @family functions from `buildr` trinity
+#' @family functions from buildr trinity
 #' @keywords file utilities misc
 #'
 #' @return No return value. Called for side effects.

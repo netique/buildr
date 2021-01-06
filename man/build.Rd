@@ -27,14 +27,14 @@ build()
 }
 }
 \seealso{
-Other functions from \code{buildr} trinity: 
+Other functions from buildr trinity: 
 \code{\link{aim}()},
 \code{\link{init}()}
 }
 \author{
 Jan Netik
 }
-\concept{functions from \code{buildr} trinity}
+\concept{functions from buildr trinity}
 \keyword{file}
 \keyword{misc}
 \keyword{utilities}

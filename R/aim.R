@@ -9,7 +9,7 @@
 #'
 #' @param target *Character*. The name of the Makefile target to set.
 #'
-#' @family functions from `buildr` trinity
+#' @family functions from buildr trinity
 #' @keywords file utilities misc
 #'
 #' @return No return value. Called for side effects.

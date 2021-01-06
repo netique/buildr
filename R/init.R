@@ -31,7 +31,7 @@
 #'   \code{vignette("know_your_buildr")} for more details. Empty string by
 #'   default (not in use).
 #'
-#' @family functions from \code{buildr} trinity
+#' @family functions from buildr trinity
 #' @keywords file utilities misc
 #' @noMd
 #'

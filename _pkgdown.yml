@@ -17,6 +17,12 @@ reference:
   - edit_makefile
   - edit_shortcuts
 
+articles:
+- title:
+  navbar: ~
+  contents:
+  - articles/know_your_buildr
+
 template:
   opengraph:
     image:

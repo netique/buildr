@@ -1,10 +1,5 @@
 ---
 title: "Know your {buildr}"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Know your {buildr}}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
@@ -16,7 +11,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-This vignette extends what `README` or `{buildr}` homepage already briefly described. There is also [version with **animated examples**](https://netique.github.io/buildr/articles/articles/know_your_buildr.html). After reading it, you'll be familiar with:
+This article extends what `README` or `{buildr}` homepage already briefly described. It's identical to the vignette, but it includes a bunch of animated examples. After reading it, you'll be familiar with:
 
 * how to work with `{buildr}` using your own keyboard shortcuts
 * how `{buildr}` works under the hood
@@ -25,11 +20,19 @@ This vignette extends what `README` or `{buildr}` homepage already briefly descr
 
 ## `{buildr}` + RStudio = ❤️
 
-It's easy to work with `{buildr}` by printing function calls in your `R` console. However, much more feasible is to use `{buildr}` as RStudio Addin, which plays nicely with keyboard shortcuts, adding to the comfort. `{buildr}` addin commands are available below your toolbar in RStudio just upon the installation.
+It's easy to work with `{buildr}` by printing function calls in your `R` console. However, much more feasible is to use `{buildr}` as RStudio Addin, which plays nicely with keyboard shortcuts, adding to the comfort. `{buildr}` addin commands are available below your toolbar in RStudio just upon the installation:
+
+```{r addinsShowcase}
+knitr::include_graphics("addins_showcase.gif")
+```
 
 > Well, that's pretty neat, but my time is precious and I don't mean to spend it by clicking around that tiny toolbar.
 
-Likewise! Here come the keyboard shortcuts. The quickest way how to set them up is to use `buildr::edit_shortcuts()`.
+Likewise! Here come the keyboard shortcuts. The quickest way how to set them up is to use `buildr::edit_shortcuts()` as shown here (for `build()` addin command):
+
+```{r shortcutsShowcase}
+knitr::include_graphics("shortcuts_showcase.gif")
+```
 
 Note that all three functions are supported as addin commands. If you stick with recommended defaults, there is no need to use anything else. The only function that may need a richer user input is `init()`. Let's describe it in more detail.
 
@@ -45,6 +48,12 @@ Those "build scripts" can do really anything, that's up to you. Commonly, they s
   * cleaning them
   * estimating some "heavier" models, saving their output 
 3. finally, you'd typically include some `{rmarkdown}` call, say `rmarkdown::render("my_report.Rmd")`
+
+Here is `init()` in action:
+
+```{r}
+knitr::include_graphics("init_showcase.gif")
+```
 
 ## Line up your bricks
 
@@ -67,9 +76,21 @@ The target of our rule is "all" and the recipe instructs the computer to quietly
 
 Now you may wonder why this section is called "Line up your bricks"? That's simple. The purpose of `aim()` is to line up the `Makefile` rules in a particular order because the Rstudio Build pane always takes the first rule available (in fact, you can specify the target manually, but it is buried deep inside the GUI). The goal of `aim()` is to list your `Makefile` rules and show them so that you can pick the one you are interested in (i.e. to prioritize it). Your choice then projects in the actual `Makefile` -- the desired rule is in the first place. That's what `aim()` does. In case you already know the target of a given rule, you can just supply it directly in the call like this: `aim(target = "all")` or even simpler `aim("all")`.
 
+Here is `aim()` in action:
+
+```{r}
+knitr::include_graphics("aim_showcase.gif")
+```
+
 ## Build
 
 Now that everything is set-up, your only task is to call `build()`. Under the hood, `{buildr}` makes sure that RStudio is set appropriately to handle the `Makefile`. RStudio Build pane may be set for building packages or websites, so it is crucial to ensure your script is run nice and clean. In case something is wrong, `{buildr}` automatically offers you a remedy.
+
+Here is `build()` in action:
+
+```{r}
+knitr::include_graphics("build_showcase.gif")
+```
 
 ## What's next?
 
