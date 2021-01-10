@@ -8,19 +8,8 @@
 
 ## R CMD check results summary
 
-0 errors | 0 warnings | 1 note
-
-NOTE:
-```
-`Found the following \keyword or \concept entries with Rd markup:`
-`File 'aim.Rd':`
-    \concept{functions from \code{buildr} trinity}
-`File 'build.Rd':`
-    \concept{functions from \code{buildr} trinity}
-`File 'init.Rd':`
-    \concept{functions from \code{buildr} trinity}
-```
+0 errors | 0 warnings | 0 note
 
 - Size of tarball: 66 125 bytes
-- Duration of check: ~ 7 s
+- Duration of check: ~ 29 s
 - This is a second CRAN release, second submission after several fixes.
