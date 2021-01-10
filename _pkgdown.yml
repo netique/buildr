@@ -11,7 +11,6 @@ reference:
   - init
   - aim
   - build
-
 - title: Others
   contents:
   - edit_makefile
@@ -34,6 +33,6 @@ template:
   params:
     ganalytics: G-B8CQ89BFM4
     docsearch:
-      api_key: buildr
-      index_name: e458fb64769df53ec0272e7b819ed428
+      api_key: e458fb64769df53ec0272e7b819ed428
+      index_name: buildr
     bootswatch: flatly
