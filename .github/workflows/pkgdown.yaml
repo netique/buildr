@@ -3,6 +3,9 @@ on:
     branches:
       - main
       - master
+  workflow_dispatch:
+    tags:
+      description: 'Build pkgdown site'
 
 name: pkgdown
 
