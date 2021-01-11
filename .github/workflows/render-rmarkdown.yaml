@@ -2,9 +2,6 @@ on:
   push:
     paths:
       - '**.Rmd'
-  workflow_dispatch:
-    tags:
-      description: 'Render all .Rmd files'
 
 name: Render Rmarkdown files
 
