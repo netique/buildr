@@ -1,5 +1,10 @@
 url: https://netique.github.io/buildr
 
+home:
+  title: "buildr: Organize & Run Build Scripts Comfortably"
+  sidebar:
+    structure: [dev, links, authors, license, community]
+
 authors:
   Jan Netik:
     href: https://jan.netik.cz
@@ -26,16 +31,13 @@ template:
   bootstrap: 5
   opengraph:
     image:
-      src: man/figures/logo.png
+      src: man/figures/card.png
       alt: "buildr: Organize & Run Build Scripts Comfortably"
     twitter:
-      title: "buildr: Organize & Run Build Scripts Comfortably"
       creator: "@netikja"
-      image: man/figures/card.png
       card: summary_large_image
   params:
     ganalytics: G-B8CQ89BFM4
     docsearch:
       api_key: e458fb64769df53ec0272e7b819ed428
       index_name: buildr
-    bootswatch: flatly
