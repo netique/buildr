@@ -23,12 +23,15 @@ articles:
   - articles/know_your_buildr
 
 template:
+  bootstrap: 5
   opengraph:
     image:
       src: man/figures/logo.png
       alt: "buildr: Organize & Run Build Scripts Comfortably"
     twitter:
+      title: "buildr: Organize & Run Build Scripts Comfortably"
       creator: "@netikja"
+      image: man/figures/card.png
       card: summary_large_image
   params:
     ganalytics: G-B8CQ89BFM4
