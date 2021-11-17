@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://netique.github.io/buildr/404.html</loc>
+  </url>
+  <url>
+    <loc>https://netique.github.io/buildr/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://netique.github.io/buildr/CONTRIBUTING.html</loc>
+  </url>
+  <url>
+    <loc>https://netique.github.io/buildr/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://netique.github.io/buildr/articles/articles/know_your_buildr.html</loc>
+  </url>
+  <url>
+    <loc>https://netique.github.io/buildr/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://netique.github.io/buildr/articles/know_your_buildr.html</loc>
+  </url>
+  <url>
+    <loc>https://netique.github.io/buildr/authors.html</loc>
+  </url>
+  <url>
     <loc>https://netique.github.io/buildr/index.html</loc>
+  </url>
+  <url>
+    <loc>https://netique.github.io/buildr/news/index.html</loc>
   </url>
   <url>
     <loc>https://netique.github.io/buildr/reference/aim.html</loc>
@@ -19,15 +46,12 @@
     <loc>https://netique.github.io/buildr/reference/edit_shortcuts.html</loc>
   </url>
   <url>
+    <loc>https://netique.github.io/buildr/reference/index.html</loc>
+  </url>
+  <url>
     <loc>https://netique.github.io/buildr/reference/init.html</loc>
   </url>
   <url>
     <loc>https://netique.github.io/buildr/reference/pipe.html</loc>
-  </url>
-  <url>
-    <loc>https://netique.github.io/buildr/articles/articles/know_your_buildr.html</loc>
-  </url>
-  <url>
-    <loc>https://netique.github.io/buildr/articles/know_your_buildr.html</loc>
   </url>
 </urlset>
