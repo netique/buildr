@@ -143,7 +143,7 @@
 <p>Those “build scripts” can do really anything, that’s up to you. Commonly, they share the following:</p>
 <ol style="list-style-type: decimal">
 <li>loading of libraries</li>
-<li>sourcing some <code>.R</code> scripts, e.g., <code><a href="https://rdrr.io/r/base/source.html">source("run_this.R", encoding = "UTF-8", local = TRUE)</a></code>, which can do a bunch of things, like:</li>
+<li>sourcing some <code>.R</code> scripts, e.g., <code>source("run_this.R", encoding = "UTF-8", local = TRUE)</code>, which can do a bunch of things, like:</li>
 </ol>
 <ul>
 <li>downloading any remote data</li>
@@ -151,7 +151,7 @@
 <li>estimating some “heavier” models, saving their output</li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
-<li>finally, you’d typically include some <a href="https://github.com/rstudio/rmarkdown">rmarkdown</a> call, say <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html">rmarkdown::render("my_report.Rmd")</a></code>
+<li>finally, you’d typically include some <a href="https://github.com/rstudio/rmarkdown">rmarkdown</a> call, say <code>rmarkdown::render("my_report.Rmd")</code>
 </li>
 </ol>
 <p>Here is <code><a href="../../reference/init.html">init()</a></code> in action:</p>
@@ -166,8 +166,8 @@
 <p>A target is usually a file name, but in our case, it is an arbitrary string uniquely identifying given <code>Makefile</code> rule. A recipe consists of a command describing what to do. In our case, we want to source a <code>.R</code> script, say <code>build_all.R</code>, so our rule would look like this:</p>
 <pre><code>all:
   @Rscript -e 'source("build_all.R")'</code></pre>
-<p>The target of our rule is “all” and the recipe instructs the computer to quietly (hence the <code><a href="https://rdrr.io/r/base/slotOp.html">@</a></code>) start <code>R</code> and source the script “build_all.R”, which resides in your project root. Note that <code>Makefile</code>s are whitespace sensitive. A tab must always precede the beginning of the recipe. <strong>Again, you don’t have to bother with any of this, as the <a href="https://netique.github.io/buildr/">buildr</a> does everything for you.</strong></p>
-<p>Now you may wonder why this section is called “Line up your bricks”? That’s simple. The purpose of <code><a href="../../reference/aim.html">aim()</a></code> is to line up the <code>Makefile</code> rules in a particular order because the Rstudio Build pane always takes the first rule available (in fact, you can specify the target manually, but it is buried deep inside the GUI). The goal of <code><a href="../../reference/aim.html">aim()</a></code> is to list your <code>Makefile</code> rules and show them so that you can pick the one you are interested in (i.e. to prioritize it). Your choice then projects in the actual <code>Makefile</code> – the desired rule is in the first place. That’s what <code><a href="../../reference/aim.html">aim()</a></code> does. In case you already know the target of a given rule, you can just supply it directly in the call like this: <code><a href="../../reference/aim.html">aim(target = "all")</a></code> or even simpler <code><a href="../../reference/aim.html">aim("all")</a></code>.</p>
+<p>The target of our rule is “all” and the recipe instructs the computer to quietly (hence the <code>@</code>) start <code>R</code> and source the script “build_all.R”, which resides in your project root. Note that <code>Makefile</code>s are whitespace sensitive. A tab must always precede the beginning of the recipe. <strong>Again, you don’t have to bother with any of this, as the <a href="https://netique.github.io/buildr/">buildr</a> does everything for you.</strong></p>
+<p>Now you may wonder why this section is called “Line up your bricks”? That’s simple. The purpose of <code><a href="../../reference/aim.html">aim()</a></code> is to line up the <code>Makefile</code> rules in a particular order because the Rstudio Build pane always takes the first rule available (in fact, you can specify the target manually, but it is buried deep inside the GUI). The goal of <code><a href="../../reference/aim.html">aim()</a></code> is to list your <code>Makefile</code> rules and show them so that you can pick the one you are interested in (i.e. to prioritize it). Your choice then projects in the actual <code>Makefile</code> – the desired rule is in the first place. That’s what <code><a href="../../reference/aim.html">aim()</a></code> does. In case you already know the target of a given rule, you can just supply it directly in the call like this: <code>aim(target = "all")</code> or even simpler <code>aim("all")</code>.</p>
 <p>Here is <code><a href="../../reference/aim.html">aim()</a></code> in action:</p>
 <p><img src="aim_showcase.gif" width="100%"></p>
 </div>
@@ -181,7 +181,7 @@
 <div id="whats-next" class="section level2">
 <h2 class="hasAnchor">
 <a href="#whats-next" class="anchor"></a>What’s next?</h2>
-<p>If you’ve already dived into the documentation of the package, you might still wonder what is the purpose of <code>command_args</code> argument of <code><a href="../../reference/init.html">init()</a></code>. When the build script is processed in RStudio Build pane, the recipe may be accompanied by so-called “command argument”. This argument can be picked up by <code>R</code> and used in your build script to further specify how it should be run. In order to use it, state your command argument when you initialize the <code>Makefile</code> using <code><a href="../../reference/init.html">init(command_arg = "my_argument")</a></code> or manually. Note that the command argument will be placed after <em>each</em> rule’s recipe. In future updates, this may accommodate a vector of command arguments, but there are many things to solve yet. Then, include the following line to your script:</p>
+<p>If you’ve already dived into the documentation of the package, you might still wonder what is the purpose of <code>command_args</code> argument of <code><a href="../../reference/init.html">init()</a></code>. When the build script is processed in RStudio Build pane, the recipe may be accompanied by so-called “command argument”. This argument can be picked up by <code>R</code> and used in your build script to further specify how it should be run. In order to use it, state your command argument when you initialize the <code>Makefile</code> using <code>init(command_arg = "my_argument")</code> or manually. Note that the command argument will be placed after <em>each</em> rule’s recipe. In future updates, this may accommodate a vector of command arguments, but there are many things to solve yet. Then, include the following line to your script:</p>
 <pre><code>command_args &lt;- commandArgs(trailingOnly = TRUE)
 </code></pre>
 <p>The object <code>command_args</code> that you’ve created by the assignment will comprise the command argument stated in <code>Makefile</code> when it is run, and you can further use it inside your script. E.g., you can query whether specific command argument was passed by <code>if ("my_arg" %in% command_args) {print("Yes")} else {print("No")}</code>.</p>
