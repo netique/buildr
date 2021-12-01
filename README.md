@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![CRAN](https://img.shields.io/cran/v/buildr?label=CRAN)](https://CRAN.R-project.org/package=buildr)
+[![buildr status
+badge](https://netique.r-universe.dev/badges/buildr)](https://netique.r-universe.dev)
 [![DESCRIPTION
 version)](https://img.shields.io/github/r-package/v/netique/buildr?label=devel)](https://github.com/netique/buildr)
 [![R CMD
@@ -63,8 +65,8 @@ occasionally.
 
 1.  First, call `init()`, which initializes a special `Makefile` in
     project root with automatically discovered build scripts that share
-    a common prefix and separator (“build” and "\_“, by default).
-    `Makefile` is a standard”recipe book" which tells the software how
+    a common prefix and separator (“build” and “\_“, by default).
+    `Makefile` is a standard”recipe book” which tells the software how
     it should be compiled. It’s so general it can serve perfectly for
     our purposes. See the [documentation for GNU
     Make](https://www.gnu.org/software/make/manual/html_node/) or read

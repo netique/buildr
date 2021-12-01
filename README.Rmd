@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 
 [![CRAN](https://img.shields.io/cran/v/buildr?label=CRAN)](https://CRAN.R-project.org/package=buildr)
+[![buildr status badge](https://netique.r-universe.dev/badges/buildr)](https://netique.r-universe.dev)
 [![DESCRIPTION version)](https://img.shields.io/github/r-package/v/netique/buildr?label=devel)](https://github.com/netique/buildr)
 [![R CMD Check](https://img.shields.io/github/workflow/status/netique/buildr/R-CMD-check)](https://github.com/netique/buildr/actions?query=workflow%3AR-CMD-check)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/buildr)](https://cranlogs.r-pkg.org/)
