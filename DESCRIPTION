@@ -37,9 +37,7 @@ Suggests:
     roxygen2,
     testthat (>= 3.0.0),
     spelling,
-    pkgdown (>= 1.9000.9000.9000)
-Remotes:
-    r-lib/pkgdown
+    pkgdown
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3
