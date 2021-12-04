@@ -55,7 +55,7 @@
 <li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li class="nav-item dropdown">
+<li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/know_your_buildr_gifs.html">Know your {buildr}</a>
@@ -82,18 +82,18 @@
     
   </div>
 </nav><div class="container template-article">
-<script src="know_your_buildr_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+<script src="know_your_buildr_gifs_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <main id="main"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Know your {buildr}</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/netique/buildr/blob/HEAD/vignettes/know_your_buildr.Rmd" class="external-link"><code>vignettes/know_your_buildr.Rmd</code></a></small>
-      <div class="d-none name"><code>know_your_buildr.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/netique/buildr/blob/HEAD/vignettes/articles/know_your_buildr_gifs.Rmd" class="external-link"><code>vignettes/articles/know_your_buildr_gifs.Rmd</code></a></small>
+      <div class="d-none name"><code>know_your_buildr_gifs.Rmd</code></div>
     </div>
 
     
     
-<p>This vignette extends what <code>README</code> or <a href="https://netique.github.io/buildr/">buildr</a> homepage already briefly described. There is also <a href="https://netique.github.io/buildr/articles/articles/know_your_buildr.html">version with <strong>animated examples</strong></a>. After reading it, you’ll be familiar with:</p>
+<p>This article extends what <code>README</code> or <a href="https://netique.github.io/buildr/">buildr</a> homepage already briefly described. It’s identical to the vignette, but it includes a bunch of animated examples. After reading it, you’ll be familiar with:</p>
 <ul>
 <li>how to work with <a href="https://netique.github.io/buildr/">buildr</a> using your own keyboard shortcuts</li>
 <li>how <a href="https://netique.github.io/buildr/">buildr</a> works under the hood</li>
@@ -104,11 +104,13 @@
 <h2 id="buildr-rstudio-️">
 <code>{buildr}</code> + RStudio = ❤️<a class="anchor" aria-label="anchor" href="#buildr-rstudio-%EF%B8%8F"></a>
 </h2>
-<p>It’s easy to work with <a href="https://netique.github.io/buildr/">buildr</a> by printing function calls in your <code>R</code> console. However, much more feasible is to use <a href="https://netique.github.io/buildr/">buildr</a> as RStudio Addin, which plays nicely with keyboard shortcuts, adding to the comfort. <a href="https://netique.github.io/buildr/">buildr</a> addin commands are available below your toolbar in RStudio just upon the installation.</p>
+<p>It’s easy to work with <a href="https://netique.github.io/buildr/">buildr</a> by printing function calls in your <code>R</code> console. However, much more feasible is to use <a href="https://netique.github.io/buildr/">buildr</a> as RStudio Addin, which plays nicely with keyboard shortcuts, adding to the comfort. <a href="https://netique.github.io/buildr/">buildr</a> addin commands are available below your toolbar in RStudio just upon the installation:</p>
+<p><img src="addins_showcase.gif" width="100%"></p>
 <blockquote>
 <p>Well, that’s pretty neat, but my time is precious and I don’t mean to spend it by clicking around that tiny toolbar.</p>
 </blockquote>
-<p>Likewise! Here come the keyboard shortcuts. The quickest way how to set them up is to use <code><a href="../reference/edit_shortcuts.html">buildr::edit_shortcuts()</a></code>.</p>
+<p>Likewise! Here come the keyboard shortcuts. The quickest way how to set them up is to use <code><a href="../reference/edit_shortcuts.html">buildr::edit_shortcuts()</a></code> as shown here (for <code><a href="../reference/build.html">build()</a></code> addin command):</p>
+<p><img src="shortcuts_showcase.gif" width="100%"></p>
 <p>Note that all three functions are supported as addin commands. If you stick with recommended defaults, there is no need to use anything else. The only function that may need a richer user input is <code><a href="../reference/init.html">init()</a></code>. Let’s describe it in more detail.</p>
 </div>
 <div class="section level2">
@@ -129,6 +131,8 @@
 <li>finally, you’d typically include some <a href="https://github.com/rstudio/rmarkdown" class="external-link">rmarkdown</a> call, say <code>rmarkdown::render("my_report.Rmd")</code>
 </li>
 </ol>
+<p>Here is <code><a href="../reference/init.html">init()</a></code> in action:</p>
+<p><img src="init_showcase.gif" width="100%"></p>
 </div>
 <div class="section level2">
 <h2 id="line-up-your-bricks">Line up your bricks<a class="anchor" aria-label="anchor" href="#line-up-your-bricks"></a>
@@ -141,11 +145,15 @@
   @Rscript -e 'source("build_all.R")'</code></pre>
 <p>The target of our rule is “all” and the recipe instructs the computer to quietly (hence the <code>@</code>) start <code>R</code> and source the script “build_all.R”, which resides in your project root. Note that <code>Makefile</code>s are whitespace sensitive. A tab must always precede the beginning of the recipe. <strong>Again, you don’t have to bother with any of this, as the <a href="https://netique.github.io/buildr/">buildr</a> does everything for you.</strong></p>
 <p>Now you may wonder why this section is called “Line up your bricks”? That’s simple. The purpose of <code><a href="../reference/aim.html">aim()</a></code> is to line up the <code>Makefile</code> rules in a particular order because the Rstudio Build pane always takes the first rule available (in fact, you can specify the target manually, but it is buried deep inside the GUI). The goal of <code><a href="../reference/aim.html">aim()</a></code> is to list your <code>Makefile</code> rules and show them so that you can pick the one you are interested in (i.e. to prioritize it). Your choice then projects in the actual <code>Makefile</code> – the desired rule is in the first place. That’s what <code><a href="../reference/aim.html">aim()</a></code> does. In case you already know the target of a given rule, you can just supply it directly in the call like this: <code>aim(target = "all")</code> or even simpler <code>aim("all")</code>.</p>
+<p>Here is <code><a href="../reference/aim.html">aim()</a></code> in action:</p>
+<p><img src="aim_showcase.gif" width="100%"></p>
 </div>
 <div class="section level2">
 <h2 id="build">Build<a class="anchor" aria-label="anchor" href="#build"></a>
 </h2>
 <p>Now that everything is set-up, your only task is to call <code><a href="../reference/build.html">build()</a></code>. Under the hood, <a href="https://netique.github.io/buildr/">buildr</a> makes sure that RStudio is set appropriately to handle the <code>Makefile</code>. RStudio Build pane may be set for building packages or websites, so it is crucial to ensure your script is run nice and clean. In case something is wrong, <a href="https://netique.github.io/buildr/">buildr</a> automatically offers you a remedy.</p>
+<p>Here is <code><a href="../reference/build.html">build()</a></code> in action:</p>
+<p><img src="build_showcase.gif" width="100%"></p>
 </div>
 <div class="section level2">
 <h2 id="whats-next">What’s next?<a class="anchor" aria-label="anchor" href="#whats-next"></a>
