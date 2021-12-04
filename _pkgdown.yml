@@ -27,6 +27,9 @@ articles:
   contents:
   - articles/know_your_buildr_gifs
 
+redirects:
+  - ["articles/know_your_buildr.html", "articles/know_your_buildr_gifs.html"]
+
 template:
   bootstrap: 5
   opengraph:
