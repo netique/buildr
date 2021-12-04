@@ -11,4 +11,5 @@
 ^_pkgdown\.yml$
 ^docs$
 ^README\.Rmd$
+^index\.md$
 ^vignettes/articles$
