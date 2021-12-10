@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   know_your_buildr_gifs: know_your_buildr_gifs.html
   know_your_buildr: know_your_buildr.html
-last_built: 2021-12-10T10:30Z
+last_built: 2021-12-10T10:32Z
 urls:
   reference: https://netique.github.io/buildr/reference
   article: https://netique.github.io/buildr/articles
