@@ -14,7 +14,7 @@ version)](https://img.shields.io/github/r-package/v/netique/buildr?label=devel)]
 Check](https://img.shields.io/github/workflow/status/netique/buildr/R-CMD-check)](https://github.com/netique/buildr/actions?query=workflow%3AR-CMD-check)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/buildr)](https://cranlogs.r-pkg.org/)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-
+[![R-CMD-check](https://github.com/netique/buildr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/netique/buildr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 > Organize & Run Build Scripts Comfortably
