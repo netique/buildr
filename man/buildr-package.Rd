@@ -6,16 +6,9 @@
 \alias{buildr-package}
 \title{buildr: Organize & Run Build Scripts Comfortably}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Working with reproducible reports or any other
-    similar projects often require to run the script that builds the
-    output file in a specified way. 'buildr' can help you organize, modify
-    and comfortably run those scripts. The package provides a set of
-    functions that interactively guides you through the process and that
-    are available as 'RStudio' Addin, meaning you can set up the keyboard
-    shortcuts, enabling you to choose and run the desired build script
-    with one keystroke anywhere anytime.
+Working with reproducible reports or any other similar projects often require to run the script that builds the output file in a specified way. 'buildr' can help you organize, modify and comfortably run those scripts. The package provides a set of functions that interactively guides you through the process and that are available as 'RStudio' Addin, meaning you can set up the keyboard shortcuts, enabling you to choose and run the desired build script with one keystroke anywhere anytime.
 }
 \seealso{
 Useful links:
