@@ -9,6 +9,16 @@ authors:
   Jan Netik:
     href: https://jan.netik.cz
 
+
+articles:
+- title:
+  navbar: ~
+  contents:
+  - articles/know_your_buildr_gifs
+- title: internal
+  contents:
+  - know_your_buildr
+
 reference:
 - title: The trinity
   desc: The core functions of the package
@@ -21,11 +31,6 @@ reference:
   - edit_makefile
   - edit_shortcuts
 
-articles:
-- title:
-  navbar: ~
-  contents:
-  - articles/know_your_buildr_gifs
 
 redirects:
   - ["articles/know_your_buildr.html", "articles/know_your_buildr_gifs.html"]
