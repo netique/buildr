@@ -1,5 +1,7 @@
 # buildr 0.1.1
 
+-   fix documentation to be HTML5 compliant
+
 # buildr 0.1.0
 
 -   **complete reboot**, a whole new philosophy *built* around automatically generated, fully editable `Makefile` and prioritization of its "rules"
