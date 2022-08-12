@@ -1,6 +1,6 @@
 Package: buildr
 Title: Organize & Run Build Scripts Comfortably
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Jan",
            family = "Netik",
