@@ -107,6 +107,6 @@ The object `command_args` that you've created by the assignment will comprise th
 
 The `{buildr}` was made with simplicity in mind. It helps you bind a given script with a single keystroke using only a handful of functions. The content of such script is completely up to you. What you code is what you get.
 
-However, if you don't mind delving a bit into new and slightly complicated things, I warmly recommend you to take a look at [drake](https://docs.ropensci.org/drake/) package or at its successor, [targets](https://github.com/wlandau/targets).
+However, if you don't mind delving a bit into new and slightly complicated things, I warmly recommend you to take a look at [drake](https://docs.ropensci.org/drake/) package or at its successor, [targets](https://github.com/ropensci/targets/).
 
 And as always, happy building!

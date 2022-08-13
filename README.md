@@ -13,7 +13,7 @@ version)](https://img.shields.io/github/r-package/v/netique/buildr?label=devel)]
 [![R CMD
 Check](https://img.shields.io/github/workflow/status/netique/buildr/R-CMD-check)](https://github.com/netique/buildr/actions?query=workflow%3AR-CMD-check)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/buildr)](https://cranlogs.r-pkg.org/)
-[![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing/)
 
 <!-- badges: end -->
 

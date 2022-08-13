@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-This vignette extends what `README` or `{buildr}` homepage already briefly described. There is also [version with **animated examples**](https://netique.github.io/buildr/articles/articles/know_your_buildr.html). After reading it, you'll be familiar with:
+This vignette extends what `README` or `{buildr}` homepage already briefly described. There is also [version with **animated examples**](https://netique.github.io/buildr/articles/know_your_buildr.html). After reading it, you'll be familiar with:
 
 * how to work with `{buildr}` using your own keyboard shortcuts
 * how `{buildr}` works under the hood
@@ -86,6 +86,6 @@ The object `command_args` that you've created by the assignment will comprise th
 
 The `{buildr}` was made with simplicity in mind. It helps you bind a given script with a single keystroke using only a handful of functions. The content of such script is completely up to you. What you code is what you get.
 
-However, if you don't mind delving a bit into new and slightly complicated things, I warmly recommend you to take a look at [drake](https://docs.ropensci.org/drake/) package or at its successor, [targets](https://github.com/wlandau/targets).
+However, if you don't mind delving a bit into new and slightly complicated things, I warmly recommend you to take a look at [drake](https://docs.ropensci.org/drake/) package or at its successor, [targets](https://github.com/ropensci/targets/).
 
 And as always, happy building!
