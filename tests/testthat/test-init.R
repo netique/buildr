@@ -15,7 +15,7 @@ test_that("init recognizes all build scripts with 'build_' prefix", {
 
   buildr::init()
 
-  expect_true(file.exists("Makefile"))
+  expect_true(file.exists("______Makefile"))
   content <- readr::read_lines("Makefile", skip_empty_rows = TRUE)
 
   n_lines <- length(content)
