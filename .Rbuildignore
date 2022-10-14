@@ -7,7 +7,6 @@
 ^cran-comments\.md$
 ^CODE_OF_CONDUCT\.md$
 ^pkgdown$
-^tests$
 ^_pkgdown\.yml$
 ^docs$
 ^README\.Rmd$
