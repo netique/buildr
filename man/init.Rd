@@ -47,7 +47,7 @@ The build script names should all follow a common pattern that is both human
 and machine readable. Filename should incorporate a prefix ("build" by
 default) and the "body" describing what the given script builds. Those two
 essential parts are separated by underscore (i.e. "_")  by default as it
-helps with the readibility. Both parts are configurable (see below), but we
+helps with the readability. Both parts are configurable (see below), but we
 encourage you not to make any changes. Do not forget that build scripts are
 matched for a prefix and separator concatenated together, so the script named
 "build.R" won't be recognized, as it doesn't begin with "build_". Follow the

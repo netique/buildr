@@ -3,7 +3,7 @@
 #' Shows popup window with RStudio keyboard shortcuts. Uses `rstudioapi`.
 #' Applicable only in RStudio and in interactive session.
 #'
-#' You can quicky reach out solicited addin function by typing it in the
+#' You can quickly reach out solicited addin function by typing it in the
 #' `Filter...` box in the very top of the popup window. Then double click at the
 #' blank space just next to the addin function name and press down desired key
 #' or key combination. Apply the changes and from now on, just call the function

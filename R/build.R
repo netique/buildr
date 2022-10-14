@@ -4,7 +4,7 @@
 #' Build pane to take the first rule in the `Makefile` (set previously with
 #' `aim()`) and runs the respective recipe.
 #'
-#' The 'Rstudio' Build pane is not allways visible and set to take `Makefiles`.
+#' The 'RStudio' Build pane is not always visible and set to take `Makefiles`.
 #' However, the `build()` ensures that everything is set properly and if not, it
 #' offers you to automatically edit necessary settings automatically for you.
 #' Note that this action forces 'RStudio' user interface (UI) to reload and you
