@@ -17,8 +17,8 @@ jobs:
         with:
           fetch-depth: 0
           
-      - name: Install libcurl on Linux
-        run: sudo apt-get update -y && sudo apt-get install -y libcurl4-openssl-dev
+      - name: Install system dependencies
+        run: sudo apt-get update -y && sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev
 
       - uses: r-lib/actions/setup-pandoc@v2
 
