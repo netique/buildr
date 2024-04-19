@@ -11,15 +11,13 @@ badge](https://netique.r-universe.dev/badges/buildr)](https://netique.r-universe
 [![DESCRIPTION
 version)](https://img.shields.io/github/r-package/v/netique/buildr?label=devel)](https://github.com/netique/buildr)
 [![R CMD
-Check](https://img.shields.io/github/workflow/status/netique/buildr/R-CMD-check)](https://github.com/netique/buildr/actions?query=workflow%3AR-CMD-check)
+Check](https://github.com/netique/buildr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/netique/buildr/actions/workflows/R-CMD-check.yaml)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/buildr)](https://cranlogs.r-pkg.org/)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing/)
 
 <!-- badges: end -->
 
 > Organize & Run Build Scripts Comfortably
-
-<!-- Warning! This development version is under construction, use the stable CRAN release, or install this development release with caution. Everything should work as intended if you see the green ![](https://img.shields.io/badge/build-passing-brightgreen) badge. Basic documentation is provided as well. -->
 
 Working with reproducible reports or any other similar projects often
 requires to run the script that “builds” the output file in a specified
